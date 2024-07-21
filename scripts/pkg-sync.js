@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import childProcess from "node:child_process";
 
 // find all packages
-const pkgs = fs.readdirSync("packages", {withFileTypes: true})
+const pkgs = fs.readdirSync("packages", { withFileTypes: true })
 	.filter(f => f.isDirectory())
 	.map(f => `${f.path}/${f.name}`)
 
@@ -17,13 +17,15 @@ for (const pkg of pkgs) {
 	console.log(`-w ${pkg}`)
 
 	// add package
-	childProcess.execSync(`npm -fw ${pkg} init `)
+	if (!fs.existsSync(`${pkg}/package.json`)) {
+		console.log(`-w ${pkg} is not initialized, fixing...`)
+		childProcess.execSync(`npm -fw ${pkg} init `)
+	}
 
-	// sync license
+	// sync license, sync author
 	childProcess.execSync(`npm -w ${pkg} pkg set license=MIT`)
-
-	// sync author
 	childProcess.execSync(`npm -w ${pkg} pkg set author="Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)"`)
+	childProcess.execSync(`npm -w ${pkg} pkg set files="dist"`)
 
 	// add tsconfig to all packages
 	fs.writeFileSync(`${pkg}/tsconfig.json`, JSON.stringify({
