@@ -1,7 +1,6 @@
 {
   "name": "@hotcakes/tsconfig",
   "version": "0.0.0-semantically-released",
-  "description": "",
   "exports": "./tsconfig.json",
   "publishConfig": {
     "access": "public"
@@ -19,5 +18,8 @@
   },
   "devDependencies": {
     "@hotcakes/release-config": "^1.2.0"
-  }
+  },
+  "main": "index.js",
+  "keywords": [],
+  "description": ""
 }

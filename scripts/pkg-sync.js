@@ -14,7 +14,12 @@ const pkgs = fs.readdirSync("packages", {withFileTypes: true})
 
 // add all MIT
 for (const pkg of pkgs) {
-	console.log(`-w ${pkg} pkg set license=MIT`)
+	console.log(`-w ${pkg}`)
+
+	// add package
+	childProcess.execSync(`npm -fw ${pkg} init `)
+
+	// sync license
 	childProcess.execSync(`npm -w ${pkg} pkg set license=MIT`)
 
 	// sync author

@@ -1,11 +1,12 @@
 {
   "name": "@hotcakes/eslint-config",
   "version": "1.0.0",
-  "description": "",
   "main": "eslint.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [],
+  "description": ""
 }

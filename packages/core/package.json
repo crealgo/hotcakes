@@ -1,26 +1,29 @@
 {
-	"name": "@hotcakes/core",
-	"version": "0.0.0-semantically-released",
-	"type": "module",
-	"publishConfig": {
-		"access": "public"
-	},
-	"scripts": {
-		"build": "tsc",
-		"prepublishOnly": "npm run build"
-	},
-	"files": [
-		"dist/**"
-	],
-	"directories": {
-		"bin": "dist"
-	},
-	"author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
-	"license": "MIT",
-	"dependencies": {
-		"@inquirer/checkbox": "^2.3.10"
-	},
-	"devDependencies": {
-		"@types/node": "^20.14.11"
-	}
+  "name": "@hotcakes/core",
+  "version": "0.0.0-semantically-released",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist/**"
+  ],
+  "directories": {
+    "bin": "dist"
+  },
+  "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
+  "license": "MIT",
+  "dependencies": {
+    "@inquirer/checkbox": "^2.3.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "description": ""
 }
