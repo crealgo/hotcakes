@@ -9,9 +9,6 @@
     "build": "tsc",
     "prepublishOnly": "npm run build"
   },
-  "files": [
-    "dist/**"
-  ],
   "directories": {
     "bin": "dist"
   },
@@ -25,5 +22,8 @@
   },
   "main": "index.js",
   "keywords": [],
-  "description": ""
+  "description": "",
+  "files": [
+    "dist"
+  ]
 }

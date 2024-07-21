@@ -15,5 +15,8 @@
   "license": "MIT",
   "main": "index.js",
   "keywords": [],
-  "description": ""
+  "description": "",
+  "files": [
+    "dist"
+  ]
 }

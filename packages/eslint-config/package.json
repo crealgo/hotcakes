@@ -8,5 +8,8 @@
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "license": "MIT",
   "keywords": [],
-  "description": ""
+  "description": "",
+  "files": [
+    "dist"
+  ]
 }
