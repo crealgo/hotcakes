@@ -1,0 +1,41 @@
+name: 🥞 Hotcakes CI | Node Semantic Release
+
+on:
+  push:
+    branches: [main, next]
+
+  workflow_call:
+    secrets:
+      NPM_TOKEN:
+        description: The NPM token used for deploying the npm registry.
+        required: true
+
+jobs:
+  hotcakes-semantic-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: npm
+
+      - name: Check node_modules Cache
+        uses: actions/cache@v4
+        id: cache
+        with:
+          path: node_modules
+          key: node_modules-${{ hashFiles('package.json') }}
+
+      - name: Install Dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm clean-install
+
+      - name: Publish Packages
+        run: npx semantic-release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

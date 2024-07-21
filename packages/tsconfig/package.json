@@ -1,0 +1,23 @@
+{
+  "name": "@hotcakes/tsconfig",
+  "version": "0.0.0-semantically-released",
+  "description": "",
+  "exports": "./tsconfig.json",
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "extends": "@hotcakes/release-config"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "typescript": "^5.5.3"
+  },
+  "devDependencies": {
+    "@hotcakes/release-config": "^1.2.0"
+  }
+}
