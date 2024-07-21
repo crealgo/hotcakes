@@ -14,13 +14,19 @@ const pkgs = fs.readdirSync("packages", {withFileTypes: true})
 
 // add all MIT
 for (const pkg of pkgs) {
-	console.log(`npm -w ${pkg} pkg set license=MIT`)
-	childProcess.spawnSync(`npm -w ${pkg} pkg set license=MIT`)
+	console.log(`-w ${pkg} pkg set license=MIT`)
+	childProcess.execSync(`npm -w ${pkg} pkg set license=MIT`)
+
+	// sync author
+	childProcess.execSync(`npm -w ${pkg} pkg set author="Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)"`)
+
+	// add tsconfig to all packages
+	fs.writeFileSync(`${pkg}/tsconfig.json`, JSON.stringify({
+		"extends": "../../tsconfig.json"
+	}, null, 2))
 }
 
-// add tsconfig to all packages
 
-// sync author
 // sync reposistory
 
 
