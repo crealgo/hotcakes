@@ -1,6 +1,6 @@
 {
   "name": "@hotcakes/core",
-  "version": "0.0.0-semantically-released",
+  "version": "1.19.0",
   "type": "module",
   "publishConfig": {
     "access": "public"

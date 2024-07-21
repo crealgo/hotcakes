@@ -1,6 +1,6 @@
 {
   "name": "@hotcakes/release-config",
-  "version": "0.0.0-semantically-released",
+  "version": "1.2.0",
   "publishConfig": {
     "access": "public"
   },
