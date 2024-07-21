@@ -13,12 +13,6 @@
   },
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "license": "MIT",
-  "peerDependencies": {
-    "typescript": "^5.5.3"
-  },
-  "devDependencies": {
-    "@hotcakes/release-config": "^1.2.0"
-  },
   "main": "index.js",
   "keywords": [],
   "description": ""
