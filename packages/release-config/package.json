@@ -10,7 +10,6 @@
   },
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "license": "MIT",
-  "main": "release.config.js",
   "keywords": [],
   "description": "",
   "files": [
