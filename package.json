@@ -11,7 +11,8 @@
 	"author": "",
 	"license": "MIT",
 	"workspaces": [
-		"packages/*"
+		"packages/*",
+		"packages-internal/*"
 	],
 	"devDependencies": {
 		"eslint": "^8.57.0",

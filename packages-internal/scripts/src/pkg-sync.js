@@ -21,8 +21,6 @@ function main() {
 		// sync license, sync author
 		cp.execSync(`npm -w ${pkg} pkg set license=MIT`);
 		cp.execSync(`npm -w ${pkg} pkg set author="Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)"`);
-		cp.execSync(`npm -w ${pkg} pkg delete files`);
-		cp.execSync(`npm -w ${pkg} pkg set files[]="dist"`);
 
 		// add tsconfig to all packages
 		const configString = JSON.stringify({ "extends": "../../tsconfig.json" }, null, 2);

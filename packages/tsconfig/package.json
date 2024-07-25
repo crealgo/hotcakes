@@ -1,7 +1,7 @@
 {
   "name": "@hotcakes/tsconfig",
   "version": "1.4.0",
-  "exports": "./tsconfig.json",
+  "exports": "./src/tsconfig.json",
   "publishConfig": {
     "access": "public"
   },
@@ -17,6 +17,6 @@
   "keywords": [],
   "description": "",
   "files": [
-    "dist"
+    "src"
   ]
 }
