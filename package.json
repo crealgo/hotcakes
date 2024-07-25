@@ -17,5 +17,8 @@
 		"eslint": "^8.57.0",
 		"tslib": "^2.6.3",
 		"typescript": "^5.5.3"
+	},
+	"dependencies": {
+		"lerna": "^8.1.7"
 	}
 }
