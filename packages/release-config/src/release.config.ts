@@ -1,4 +1,4 @@
-module.exports = {
+const releaseConfig = {
 	branches: [
 		{
 			name: 'main',
@@ -10,3 +10,5 @@ module.exports = {
 		},
 	]
 };
+
+export default releaseConfig;

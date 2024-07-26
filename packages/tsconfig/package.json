@@ -1,7 +1,8 @@
 {
   "name": "@hotcakes/tsconfig",
   "version": "1.4.0",
-  "exports": "./src/tsconfig.json",
+  "exports": "./dist/tsconfig.json",
+	"type": "module",
   "publishConfig": {
     "access": "public"
   },
@@ -9,13 +10,14 @@
     "extends": "@hotcakes/release-config"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node src/copy-tsconfig.js",
+		"prepublishOnly": "npm run build"
   },
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "license": "MIT",
   "keywords": [],
   "description": "",
   "files": [
-    "src"
+    "dist"
   ]
 }

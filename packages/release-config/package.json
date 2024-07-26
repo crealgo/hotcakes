@@ -4,15 +4,17 @@
   "publishConfig": {
     "access": "public"
   },
-  "exports": "./src/release.config.js",
+	"type": "module",
+  "exports": "./dist/release.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+		"build": "tsc --noEmit false --rootDir src --outDir dist",
+    "prepublishOnly": "npm run build"
   },
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "license": "MIT",
   "keywords": [],
   "description": "",
   "files": [
-    "src"
+    "dist"
   ]
 }

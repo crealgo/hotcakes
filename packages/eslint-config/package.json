@@ -1,7 +1,7 @@
 {
   "name": "@hotcakes/eslint-config",
   "version": "1.3.0",
-  "exports": "./src/eslint.config.js",
+  "exports": "./dist/eslint.config.js",
 	"peerDependencies": {
 		"eslint": "^8.57.0",
 		"typescript": "^5.5.4"
@@ -12,13 +12,14 @@
 		"eslint-config-xo-typescript": "^5.0.0"
 	},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc --noEmit false --rootDir src --outDir dist",
+    "prepublishOnly": "npm run build"
   },
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "license": "MIT",
   "keywords": [],
   "description": "",
   "files": [
-    "src"
+    "dist"
   ]
 }
