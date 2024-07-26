@@ -1,8 +1,8 @@
 name: 🥞 Hotcakes CI | Node Semantic Release
 
 on:
-  # push:
-    # branches: [main, next]
+  push:
+    branches: [main, next]
 
   workflow_call:
     secrets:
@@ -14,28 +14,29 @@ jobs:
   hotcakes-semantic-release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: 🗄️ Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: 🪄 Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: lts/*
+          node-version-file: .nvmrc
           cache: npm
 
-      - name: Check node_modules Cache
+      - name: 💾 Check node_modules Cache
         uses: actions/cache@v4
         id: cache
         with:
           path: node_modules
-          key: node_modules-${{ hashFiles('package.json') }}
+          key: node_modules-${{ hashFiles('package-lock.json') }}
 
-      - name: Install Dependencies
+      - name: ⚙️ Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm clean-install
 
-      - name: Publish Packages
-        run: npx semantic-release
+      - name: 🚀 Publish Packages
+        run: |
+          npx semantic-release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
