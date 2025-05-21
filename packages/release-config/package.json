@@ -5,16 +5,9 @@
     "access": "public"
   },
 	"type": "module",
-  "exports": "./dist/release.config.js",
-  "scripts": {
-		"build": "tsc --noEmit false --rootDir src --outDir dist",
-    "prepublishOnly": "npm run build"
-  },
+  "exports": "./release.config.js",
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "license": "MIT",
   "keywords": [],
-  "description": "",
-  "files": [
-    "dist"
-  ]
+  "description": ""
 }

@@ -6,18 +6,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "release": {
-    "extends": "@hotcakes/release-config"
-  },
-  "scripts": {
-    "build": "ts-node src/copy-tsconfig.ts",
-		"prepublishOnly": "npm run build"
-  },
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "license": "MIT",
   "keywords": [],
-  "description": "",
-  "files": [
-    "dist"
-  ]
+  "description": ""
 }

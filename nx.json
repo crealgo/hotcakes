@@ -1,26 +1,36 @@
 {
-  "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "targetDefaults": {
-    "prepublishOnly": {
-      "dependsOn": [
-        "^prepublishOnly"
-      ],
-      "outputs": [
-        "{projectRoot}/dist"
-      ],
-      "cache": true
-    },
-    "test": {
-      "dependsOn": [
-        "^test"
-      ]
-    },
-    "build": {
-      "outputs": [
-        "{projectRoot}/dist"
-      ],
-      "cache": true
-    }
-  },
-  "defaultBase": "dev"
+	"$schema": "./node_modules/nx/schemas/nx-schema.json",
+	"defaultBase": "main",
+	"release": {
+		"projects": [
+			"packages/*"
+		],
+		"version": {
+			"conventionalCommits": true
+		},
+		"changelog": {
+			"projectChangelogs": {
+				"renderOptions": {
+					"authors": true,
+					"commitReferences": true,
+					"versionTitleDate": true,
+					"applyUsernameToAuthors": true
+				}
+			},
+			"workspaceChangelog": {
+				"renderOptions": {
+					"authors": true,
+					"commitReferences": true,
+					"versionTitleDate": true,
+					"applyUsernameToAuthors": true
+				}
+			}
+		}
+	},
+	"plugins": [{
+		"name": "@nx/js",
+		"options": {
+			"build": false
+		}
+	}]
 }
