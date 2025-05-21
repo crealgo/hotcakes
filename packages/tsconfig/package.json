@@ -10,7 +10,7 @@
     "extends": "@hotcakes/release-config"
   },
   "scripts": {
-    "build": "node src/copy-tsconfig.js",
+    "build": "ts-node src/copy-tsconfig.ts",
 		"prepublishOnly": "npm run build"
   },
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",

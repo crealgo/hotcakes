@@ -20,5 +20,5 @@ export default {
 		"@typescript-eslint/no-require-imports": "off",
 		"@typescript-eslint/no-var-requires": "off",
 	},
-	ignorePatterns: ["node_modules", "dist"],
+	ignorePatterns: ["**/node_modules", "**/dist"],
 };

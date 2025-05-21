@@ -14,7 +14,7 @@ const getPublishFolder = async (packageConfigPath: string) => {
 	return path.resolve(json.files[0]);
 }
 
-async function main() {
+const main = async () => {
 	const tsconfigPath = path.resolve("../../tsconfig.json");
 	const packageConfigPath = path.resolve('./package.json');
 
