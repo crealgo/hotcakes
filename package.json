@@ -17,6 +17,7 @@
   "devDependencies": {
     "commitizen": "^4.3.0",
     "eslint": "^9.27.0",
-    "nx": "19.5.3"
+    "nx": "19.5.3",
+    "@nx/js": "^21.1.0"
   }
 }
