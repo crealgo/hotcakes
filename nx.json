@@ -28,7 +28,7 @@
 		}
 	},
 	"plugins": [{
-		"name": "@nx/js",
+		"plugin": "@nx/js",
 		"options": {
 			"build": false
 		}

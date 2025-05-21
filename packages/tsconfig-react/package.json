@@ -6,10 +6,22 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "@hotcakes/tsconfig": "latest"
+  },
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "license": "MIT",
-  "keywords": [],
-  "description": "",
+  "keywords": [
+    "hotcakes",
+    "typescript",
+    "tsconfig",
+    "react",
+    "jsx",
+    "shared-config",
+    "compiler-options",
+    "tooling"
+  ],
+  "description": "TypeScript configuration optimized for React projects in the Hotcakes ecosystem. Extends @hotcakes/tsconfig with JSX and React-specific compiler options.",
   "files": [
     "./tsconfig.json"
   ]

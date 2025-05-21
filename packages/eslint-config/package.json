@@ -12,9 +12,19 @@
   },
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "hotcakes",
+    "eslint",
+    "eslint-config",
+    "linting",
+    "javascript",
+    "code-style",
+    "shared-config",
+    "tooling",
+    "monorepo"
+  ],
   "files": [
     "./eslint.config.js"
   ],
-  "description": ""
+  "description": "Provides a consistent linting foundation for JavaScript projects. It defines a solid baseline of style and best practices, and is extendable for both internal and external usage."
 }

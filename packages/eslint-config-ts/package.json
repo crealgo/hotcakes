@@ -16,9 +16,20 @@
   },
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "hotcakes",
+    "eslint",
+    "eslint-config",
+    "typescript",
+    "eslint-typescript",
+    "linting",
+    "shared-config",
+    "code-quality",
+    "tooling",
+    "monorepo",
+  ],
   "files": [
     "./eslint.config.js"
   ],
-  "description": ""
+  "description": "A standalone ESLint configuration for TypeScript projects in the Hotcakes ecosystem. Includes TypeScript-specific linting rules and parser options. Designed for projects using tsconfig from @hotcakes/tsconfig."
 }

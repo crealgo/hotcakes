@@ -8,9 +8,18 @@
   },
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "hotcakes",
+    "typescript",
+    "tsconfig",
+    "shared-config",
+    "compiler-options",
+    "base-config",
+    "monorepo",
+    "tooling"
+  ],
   "files": [
     "./tsconfig.json"
   ],
-  "description": ""
+  "description": "Shared TypeScript configuration for the Hotcakes ecosystem. Provides a consistent set of compiler options to be extended across all @hotcakes packages."
 }
