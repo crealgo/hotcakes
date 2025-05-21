@@ -2,12 +2,15 @@
   "name": "@hotcakes/tsconfig",
   "version": "1.4.0",
   "exports": "./tsconfig.json",
-	"type": "module",
+  "type": "module",
   "publishConfig": {
     "access": "public"
   },
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "license": "MIT",
   "keywords": [],
+  "files": [
+    "./tsconfig.json"
+  ],
   "description": ""
 }

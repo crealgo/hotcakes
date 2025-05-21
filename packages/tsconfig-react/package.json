@@ -2,7 +2,7 @@
   "name": "@hotcakes/tsconfig-react",
   "version": "1.4.0",
   "exports": "./tsconfig.json",
-	"type": "module",
+  "type": "module",
   "publishConfig": {
     "access": "public"
   },
@@ -11,6 +11,6 @@
   "keywords": [],
   "description": "",
   "files": [
-    "dist"
+    "./tsconfig.json"
   ]
 }

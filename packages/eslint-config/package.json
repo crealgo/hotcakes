@@ -1,7 +1,7 @@
 {
   "name": "@hotcakes/eslint-config",
-  "version": "1.3.0",
-	"type": "module",
+  "version": "1.4.0",
+  "type": "module",
   "main": "./eslint.config.js",
   "exports": "./eslint.config.js",
   "dependencies": {
@@ -13,5 +13,8 @@
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "license": "MIT",
   "keywords": [],
+  "files": [
+    "./eslint.config.js"
+  ],
   "description": ""
 }
