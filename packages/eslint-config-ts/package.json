@@ -1,6 +1,6 @@
 {
   "name": "@hotcakes/eslint-config-ts",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "type": "module",
   "main": "./eslint.config.js",
   "exports": "./eslint.config.js",
@@ -26,7 +26,7 @@
     "shared-config",
     "code-quality",
     "tooling",
-    "monorepo",
+    "monorepo"
   ],
   "files": [
     "./eslint.config.js"

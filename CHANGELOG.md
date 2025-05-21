@@ -1,3 +1,14 @@
+## 1.5.0 (2025-05-21)
+
+
+### 🚀 Features
+
+- update package descriptions and add tags ([3fbbfeb](https://github.com/crealgo/hotcakes-core/commit/3fbbfeb))
+
+### ❤️  Thank You
+
+- Manas Chimpidi @manasc
+
 ## 1.4.0 (2025-05-21)
 
 

@@ -1,3 +1,15 @@
+## 1.5.0 (2025-05-21)
+
+
+### 🚀 Features
+
+- update package descriptions and add tags
+
+
+### ❤️  Thank You
+
+- Manas Chimpidi
+
 ## 1.4.0 (2025-05-21)
 
 
