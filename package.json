@@ -2,7 +2,7 @@
   "name": "hotcakes-core",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sync": "node scripts/pkg-sync.js"
@@ -16,10 +16,7 @@
   ],
   "devDependencies": {
     "commitizen": "^4.3.0",
-    "eslint": "^8.57.0",
-    "nx": "19.5.3",
-    "ts-node": "^10.9.2",
-    "tslib": "^2.6.3",
-    "typescript": "^5.5.3"
+    "eslint": "^9.27.0",
+    "nx": "19.5.3"
   }
 }

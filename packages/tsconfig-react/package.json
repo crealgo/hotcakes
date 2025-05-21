@@ -1,5 +1,5 @@
 {
-  "name": "@hotcakes/tsconfig",
+  "name": "@hotcakes/tsconfig-react",
   "version": "1.4.0",
   "exports": "./tsconfig.json",
 	"type": "module",
