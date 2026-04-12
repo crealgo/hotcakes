@@ -1,4 +1,12 @@
 {
   "name": "hotcakes-core",
-  "$schema": "./node_modules/nx/schemas/project-schema.json"
+  "$schema": "./node_modules/nx/schemas/project-schema.json",
+  "targets": {
+    "build": {
+      "command": "tsc --build"
+    },
+    "publish": {
+      "command": "pnpm publish"
+    }
+  }
 }

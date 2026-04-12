@@ -11,10 +11,6 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@nx/js": "22.6.5",
-    "@swc-node/register": "~1.11.1",
-    "@swc/core": "~1.15.5",
-    "@swc/helpers": "~0.5.18",
     "commitizen": "^4.3.0",
     "eslint": "^9.27.0",
     "nx": "22.x",
