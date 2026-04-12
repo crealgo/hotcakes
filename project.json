@@ -1,0 +1,15 @@
+{
+  "name": "hotcakes-core",
+  "$schema": "./node_modules/nx/schemas/project-schema.json",
+  "targets": {
+    "build": {
+      "command": "tsc --build",
+      "cache": false
+    },
+    "release": {
+      "command": "semantic-release",
+      "cache": false,
+      "dependsOn": ["^build"]
+    }
+  }
+}
