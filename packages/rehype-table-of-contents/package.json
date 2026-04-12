@@ -1,52 +1,52 @@
 {
-	"name": "@hotcakes/rehype-table-of-contents",
-	"type": "module",
-	"version": "0.0.0-semantically-released",
-	"author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
-	"description": "MDX plugin that (1) generates a table of contents based on headings tags found in the content, (2) converts the headings into links and (3) appends it to the mdx frontmatter",
-	"exports": {
+  "name": "@hotcakes/rehype-table-of-contents",
+  "type": "module",
+  "version": "1.6.0",
+  "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
+  "description": "MDX plugin that (1) generates a table of contents based on headings tags found in the content, (2) converts the headings into links and (3) appends it to the mdx frontmatter",
+  "exports": {
     ".": "./lib/index.js",
     "./*": "./lib/*.js",
     "./utils/*": "./lib/utils/*.js"
   },
-	"files": [
-		"dist/**"
-	],
-	"scripts": {
-		"build": "tsc --noEmit false --rootDir src --outDir dist",
-		"test": "vitest __tests__/unit",
-		"prepublishOnly": "npm run test && npm run build"
-	},
-	"homepage": "https://crealgo.com",
-	"license": "MIT",
-	"keywords": [
-		"table",
-		"of",
-		"contents",
-		"table of contents",
-		"rehype",
-		"mdx",
-		"headings",
-		"anchors"
-	],
-	"devDependencies": {
-		"@types/estree": "1.x",
-		"@types/hast": "3.x",
-		"@types/mdast": "4.x",
-		"@types/unist": "3.x",
-		"hast": "1.x",
-		"publint": "catalog:",
-		"typescript": "catalog:",
-		"vitest": "catalog:",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsc --noEmit false --rootDir src --outDir dist",
+    "test": "vitest __tests__/unit",
+    "prepublishOnly": "npm run test && npm run build"
+  },
+  "homepage": "https://crealgo.com",
+  "license": "MIT",
+  "keywords": [
+    "table",
+    "of",
+    "contents",
+    "table of contents",
+    "rehype",
+    "mdx",
+    "headings",
+    "anchors"
+  ],
+  "devDependencies": {
+    "@types/estree": "1.x",
+    "@types/hast": "3.x",
+    "@types/mdast": "4.x",
+    "@types/unist": "3.x",
+    "hast": "1.x",
+    "publint": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
     "unified": "11.x"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"dependencies": {
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
     "remark-frontmatter": "5.x",
-		"remark-mdx-frontmatter": "5.x",
-		"change-case": "5.x",
-		"mdast-util-mdxjs-esm": "2.x"
-	}
+    "remark-mdx-frontmatter": "5.x",
+    "change-case": "5.x",
+    "mdast-util-mdxjs-esm": "2.x"
+  }
 }

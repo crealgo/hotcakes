@@ -1,3 +1,13 @@
+## 1.6.0 (2026-04-12)
+
+### 🚀 Features
+
+- add rehype-table-of-contents ([ea73e6e](https://github.com/crealgo/hotcakes-core/commit/ea73e6e))
+
+### ❤️ Thank You
+
+- Manas Chimpidi @manasc
+
 ## 1.5.0 (2025-05-21)
 
 
