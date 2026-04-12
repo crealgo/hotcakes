@@ -1,0 +1,4 @@
+{
+	"extends": "@hotcakes/tsconfig",
+	"include": ["src"]
+}

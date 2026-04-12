@@ -1,0 +1,4 @@
+{
+  "extends": "./node_modules/@hotcakes/core/lib/tsconfig.json",
+  "include": ["src/**/*","scripts/**/*"]
+}
