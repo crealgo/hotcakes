@@ -1,0 +1,9 @@
+CHANGELOG.md
+eslint.config.js
+nx.json
+package.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
+project.json
+tsconfig.base.json
+tsconfig.json
