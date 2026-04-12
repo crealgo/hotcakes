@@ -13,6 +13,7 @@
   "devDependencies": {
     "commitizen": "^4.3.0",
     "eslint": "^9.27.0",
-    "nx": "22.x"
+    "nx": "22.x",
+    "typescript": "catalog:"
   }
 }

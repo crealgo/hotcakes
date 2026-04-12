@@ -2,8 +2,8 @@
   "extends": "./tsconfig.base.json",
   "references": [
     {
-      "path": "./packages-new/rehype-table-of-contents/tsconfig.json"
+      "path": "./packages/rehype-table-of-contents/tsconfig.json"
     }
   ],
-  "exclude": ["node_modules", "dist"]
+  "files": []
 }
