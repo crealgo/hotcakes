@@ -14,6 +14,8 @@
     "commitizen": "^4.3.0",
     "eslint": "^9.27.0",
     "nx": "22.x",
+    "release": "^6.3.1",
+    "semantic-release": "25.x",
     "typescript": "catalog:"
   }
 }

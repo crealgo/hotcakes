@@ -10,12 +10,9 @@
     "./utils/*": "./lib/utils/*.js"
   },
   "files": [
-    "lib/**"
+    "lib/**",
+    "LICENSE"
   ],
-  "scripts": {
-    "build": "tsc --build",
-    "prepublishOnly": "npm run build"
-  },
   "homepage": "https://crealgo.com",
   "license": "MIT",
   "keywords": [
