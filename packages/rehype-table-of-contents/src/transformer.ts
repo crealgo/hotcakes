@@ -4,7 +4,7 @@ import {AnchorElement, ArrayExpression, ObjectExpression} from './utils/builders
 import {getFrontMatter} from './utils/getFrontMatter.js';
 import {getHeadings} from './utils/getHeadings.js';
 
-export default function transformer(ast: hast.Root) {
+const transformer = (ast: hast.Root): void => {
 	const frontmatter = getFrontMatter(ast);
 	const headings = getHeadings(ast);
 
@@ -39,3 +39,5 @@ export default function transformer(ast: hast.Root) {
 		value: tableOfContents,
 	});
 }
+
+export default transformer;
