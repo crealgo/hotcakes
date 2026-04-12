@@ -1,29 +1,9 @@
 {
-	"compilerOptions": {
-		"allowJs": true,
-		"allowSyntheticDefaultImports": true,
-		"checkJs": true,
-		"composite": true,
-		"declaration": true,
-		"declarationMap": true,
-		"esModuleInterop": true,
-		"incremental": true,
-		"isolatedModules": true,
-		"jsx": "react-jsx",
-		"lib": [
-			"esnext",
-			"dom",
-			"dom.iterable"
-		],
-		"noEmit": true,
-		"resolveJsonModule": true,
-		"skipLibCheck": true,
-		"sourceMap": true,
-		"strictNullChecks": true,
-		"strict": true,
-		"target": "ES6",
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext"
-	},
-	"exclude": ["node_modules", "dist"]
+  "extends": "./tsconfig.base.json",
+  "references": [
+    {
+      "path": "./packages-new/rehype-table-of-contents/tsconfig.json"
+    }
+  ],
+  "exclude": ["node_modules", "dist"]
 }

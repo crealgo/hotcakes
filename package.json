@@ -10,14 +10,9 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "workspaces": [
-    "packages/*",
-    "packages-internal/*"
-  ],
   "devDependencies": {
     "commitizen": "^4.3.0",
     "eslint": "^9.27.0",
-    "nx": "19.5.3",
-    "@nx/js": "^21.1.0"
+    "nx": "22.x"
   }
 }
