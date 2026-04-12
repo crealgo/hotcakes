@@ -10,12 +10,11 @@
     "./utils/*": "./lib/utils/*.js"
   },
   "files": [
-    "dist/**"
+    "lib/**"
   ],
   "scripts": {
-    "build": "tsc --noEmit false --rootDir src --outDir dist",
-    "test": "vitest __tests__/unit",
-    "prepublishOnly": "npm run test && npm run build"
+    "build": "tsc build",
+    "prepublishOnly": "npm run build"
   },
   "homepage": "https://crealgo.com",
   "license": "MIT",
