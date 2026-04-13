@@ -5,11 +5,6 @@
     "build": {
       "command": "tsc --build",
       "cache": false
-    },
-    "release": {
-      "command": "semantic-release",
-      "cache": false,
-      "dependsOn": ["^build"]
     }
   }
 }

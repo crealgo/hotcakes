@@ -3,6 +3,7 @@
   "defaultBase": "main",
   "analytics": false,
   "release": {
+    "projects": ["packages/*"],
     "version": {
       "conventionalCommits": true,
       "preserveLocalDependencyProtocols": false
@@ -14,10 +15,11 @@
     "changelog": {
       "projectChangelogs": true
     },
-    "releaseTag": {
-      "pattern": "{projectName}@{version}"
-    },
     "projectsRelationship": "independent"
+  },
+  "workspaceLayout": {
+    "appsDir": "apps",
+    "libsDir": "packages"
   },
   "plugins": [
     {
@@ -28,7 +30,7 @@
         },
         "build": {
           "targetName": "build",
-          "configName": "tsconfig.lib.json",
+          "configName": "tsconfig.json",
           "buildDepsName": "build-deps",
           "watchDepsName": "watch-deps"
         }
