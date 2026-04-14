@@ -9,7 +9,7 @@
       "preserveLocalDependencyProtocols": false
     },
     "git": {
-      "commit": false,
+      "commit": true,
       "tag": true
     },
     "changelog": {
