@@ -3,6 +3,9 @@
   "references": [
     {
       "path": "./packages/rehype-table-of-contents/tsconfig.json"
+    },
+    {
+      "path": "./packages/eslint-config/tsconfig.json"
     }
   ],
   "files": []

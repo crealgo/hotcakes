@@ -1,3 +1,3 @@
-import baseConfig from "./packages/eslint-config/eslint.config.js"
+import hotcakesConfig from "@hotcakes/eslint-config";
 
-export default baseConfig;
+export default hotcakesConfig;
