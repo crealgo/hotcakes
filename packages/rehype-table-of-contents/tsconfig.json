@@ -5,6 +5,12 @@
     "rootDir": "./src",
     "outDir": "./lib"
   },
-	"include": ["src"],
-  "exclude": ["node_modules", "dist", "lib"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "lib"
+  ]
 }
