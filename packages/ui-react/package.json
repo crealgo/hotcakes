@@ -1,0 +1,41 @@
+{
+  "name": "@hotcakes/ui-react",
+  "version": "0.0.0-semantically-released",
+  "type": "module",
+  "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
+  "scripts": {
+    "build": "tsc --noEmit false --rootDir src --outDir dist",
+    "prepack": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "description": "",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*.js",
+    "./utils/*": "./lib/utils/*.js",
+    "./hooks/*": "./lib/hooks/*.js"
+  },
+  "files": [
+    "lib/**"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "styled-components": "^6.1.11",
+    "tailwindcss": "^4.2.4"
+  },
+  "peerDependencies": {
+    "next": "^14.2.35",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

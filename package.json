@@ -1,21 +1,20 @@
 {
   "name": "hotcakes-core",
-  "version": "1.0.3",
+  "version": "0.0.0",
   "description": "",
   "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sync": "node scripts/pkg-sync.js"
-  },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "commitizen": "^4.3.0",
-    "eslint": "^9.27.0",
-    "nx": "22.x",
+    "@nx/js": "22.6.5",
+    "@swc-node/register": "~1.11.1",
+    "@swc/core": "~1.15.33",
+    "@swc/helpers": "~0.5.21",
+    "commitizen": "^4.3.1",
+    "eslint": "^9.39.4",
+    "nx": "~22.7.1",
     "release": "^6.3.1",
-    "semantic-release": "25.x",
     "typescript": "catalog:"
   }
 }

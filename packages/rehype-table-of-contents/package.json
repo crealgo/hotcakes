@@ -1,7 +1,7 @@
 {
   "name": "@hotcakes/rehype-table-of-contents",
   "type": "module",
-  "version": "1.8.8",
+  "version": "1.9.0",
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "description": "MDX plugin that (1) generates a table of contents based on headings tags found in the content, (2) converts the headings into links and (3) appends it to the mdx frontmatter",
   "exports": {
