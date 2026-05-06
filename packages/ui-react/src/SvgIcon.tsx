@@ -3,7 +3,7 @@
 import { styled } from 'styled-components';
 
 interface SvgIconProps {
-    readonly icon: React.ComponentType;
+    icon: React.ComponentType;
 }
 
 const SvgIconRoot = styled.span`

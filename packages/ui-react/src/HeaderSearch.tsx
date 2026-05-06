@@ -1,6 +1,6 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation.js';
 import { useEffect, useRef } from 'react';
 import { styled, css } from 'styled-components';
 import { Block } from './Block.js';
@@ -8,8 +8,8 @@ import { Container } from './Container.js';
 import { IconButton } from './IconButton.js';
 
 interface Props {
-    readonly onClose: () => void;
-    readonly isOpen?: boolean;
+    onClose: () => void;
+    isOpen?: boolean;
 }
 
 const SearchBoxRoot = styled(Block)((props) => css`

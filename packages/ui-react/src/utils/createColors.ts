@@ -1,6 +1,6 @@
 'use client';
 
-import tailwindColors from 'tailwindcss';
+import tailwindColors from 'tailwindcss/colors';
 
 export const createColors = () => ({
     brand: {

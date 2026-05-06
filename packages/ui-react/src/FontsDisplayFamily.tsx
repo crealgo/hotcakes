@@ -11,7 +11,7 @@ import { Mark } from './Mark.js';
 import { getRandomIndex } from './utils/getRandomIndex.js';
 
 interface FontsDisplayProps {
-    readonly fontUrl: string;
+    fontUrl: string;
 }
 
 const parseFontURL = (fontURLString: string) => {

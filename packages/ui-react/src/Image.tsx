@@ -2,12 +2,10 @@
 
 import clsx from 'clsx';
 import { useState } from 'react';
-import { styled, css } from 'styled-components';
-import NextImage from 'next/image';
-import type { ImageProps as NextImageProps } from 'next/image';
-import { LoadingDots } from './LoadingDots';
+import { css, styled } from 'styled-components';
+import { LoadingDots } from './LoadingDots.js';
 
-const ImageElement = styled(NextImage)`
+const ImageElement = styled.img`
     width: 100%;
     height: 100%;
 
@@ -27,9 +25,9 @@ const ImageElement = styled(NextImage)`
 `;
 
 const ImageRoot = styled.div<{
-    readonly $aspectRatio?: string;
-    readonly $width?: string;
-    readonly $height?: string;
+    $aspectRatio?: string;
+    $width?: string;
+    $height?: string;
 }>((props) => css`
     position: relative;
     width: ${props.$width ?? '100%'};
@@ -43,14 +41,14 @@ const ImageRoot = styled.div<{
 `);
 
 export type ImageProps = {
-    readonly className?: string;
-    readonly aspectRatio?: string;
-    readonly width?: string;
-    readonly height?: string;
-    readonly loadingTransition?: 'translate' | 'fade' | 'none';
-    readonly hideLoader?: boolean;
-    readonly objectFit?: 'cover' | 'contain';
-} & Pick<NextImageProps, 'src' | 'alt'>;
+    className?: string;
+    aspectRatio?: string;
+    width?: string;
+    height?: string;
+    loadingTransition?: 'translate' | 'fade' | 'none';
+    hideLoader?: boolean;
+    objectFit?: 'cover' | 'contain';
+} & React.ComponentPropsWithRef<'img'>;
 
 export const Image: React.FC<ImageProps> = ({
     className,
@@ -69,13 +67,13 @@ export const Image: React.FC<ImageProps> = ({
         >
             {isLoading && <LoadingDots className="absolute" />}
             <ImageElement
-                unoptimized
+                // unoptimized
                 alt={props.alt}
                 src={props.src}
                 loading="lazy"
-                layout="fill"
-                objectFit="cover"
-                loader={({ src }) => src}
+                // layout="fill"
+                // objectFit="cover"
+                // loader={(props: { src: string }) => props.src}
                 className={clsx({ loaded: imageLoaded })}
                 onLoad={() => {
                     setImageLoaded(true);

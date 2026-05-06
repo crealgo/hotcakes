@@ -2,11 +2,11 @@
 
 import { forwardRef } from 'react';
 import { styled, css } from 'styled-components';
-import { ButtonBase } from './ButtonBase';
-import { Icon } from './Icon';
+import { ButtonBase } from './ButtonBase.js';
+import { Icon } from './Icon.js';
 
 interface Props {
-    readonly contrast?: boolean;
+    contrast?: boolean;
 }
 
 const IconButtonRoot = styled(ButtonBase)<{ $contrast?: boolean }>((props) => css`

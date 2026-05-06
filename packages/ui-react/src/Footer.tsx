@@ -33,7 +33,7 @@ const GridContainer = styled(Container)(({ theme }) => css`
 `);
 
 interface Props {
-    readonly socialLinks: Work.SocialLink[];
+    socialLinks: Work.SocialLink[];
 }
 
 export const Footer: React.FC<Props> = (props) => (

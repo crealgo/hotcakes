@@ -3,7 +3,7 @@
 import { ColorChip } from './ColorChip.js';
 
 export interface ColorPaletteProps {
-    readonly colors: {
+    colors: {
         name: string;
         hex: string;
     }[];

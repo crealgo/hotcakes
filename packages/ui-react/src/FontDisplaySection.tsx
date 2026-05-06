@@ -1,10 +1,10 @@
 import { styled, css } from 'styled-components';
 
 interface Props {
-    readonly area: 'snippet' | 'glyph' | 'characters';
-    readonly children: React.ReactNode;
-    readonly title: React.ReactNode;
-    readonly helperText?: React.ReactNode;
+    area: 'snippet' | 'glyph' | 'characters';
+    children: React.ReactNode;
+    title: React.ReactNode;
+    helperText?: React.ReactNode;
 }
 
 const Root = styled.div<{ $area: Props['area'] }>((props) => css`

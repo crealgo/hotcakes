@@ -9,7 +9,7 @@ const FontIconRoot = styled.span`
 `;
 
 interface FontIconProps {
-    readonly icon: string;
+    icon: string;
 }
 
 export const FontIcon: React.FC<FontIconProps> = (props) => (

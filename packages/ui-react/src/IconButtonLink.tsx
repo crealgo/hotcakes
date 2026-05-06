@@ -1,7 +1,7 @@
 'use client';
 
-import { ButtonBase } from './ButtonBase';
-import { Icon } from './Icon';
+import { ButtonBase } from './ButtonBase.js';
+import { Icon } from './Icon.js';
 
 export const IconButtonLink: React.FC<ControlProps<HTMLAnchorElement>> = (props) => (
     <ButtonBase {...props} shape="square" as="a" title={props.children?.toString()}>

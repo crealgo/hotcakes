@@ -1,12 +1,11 @@
 'use client';
 
-import NextLink, { type LinkProps as NextLinkProps } from 'next/link';
 import { styled } from 'styled-components';
-import { Typography } from './Typography';
+import { Typography } from './Typography.js';
 
-type LinkProps = React.PropsWithChildren<NextLinkProps>;
+type LinkProps = React.ComponentPropsWithRef<'a'>;
 
-const StyledLink = styled(NextLink)(({ theme }) => `
+const StyledLink = styled.a(({ theme }) => `
     cursor: pointer;
     gap: ${theme.spacing(0.25)};
     color: ${theme.color.slate[500]};
@@ -26,7 +25,6 @@ const StyledLink = styled(NextLink)(({ theme }) => `
 export const LinkLarge: React.FC<LinkProps> = (props) => (
     <StyledLink
         {...props}
-        prefetch
         className="LinkLarge-root"
     >
         <Typography variant="display2" as="span">

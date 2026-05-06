@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation.js';
 import { useEffect, useRef, useState } from 'react';
 import { styled, css } from 'styled-components';
 import { Block } from './Block.js';
@@ -57,8 +57,8 @@ const HeaderEndContent = styled.div`
 `;
 
 interface Props {
-    readonly mainLinks: Work.MainLink[];
-    readonly socialLinks: Work.SocialLink[];
+    mainLinks: Work.MainLink[];
+    socialLinks: Work.SocialLink[];
 }
 
 export const Header: React.FC<Props> = (props) => {

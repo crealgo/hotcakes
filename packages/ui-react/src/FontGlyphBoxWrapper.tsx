@@ -3,7 +3,7 @@
 import { styled } from 'styled-components';
 
 interface Props {
-    readonly children: React.ReactNode;
+    children: React.ReactNode;
 }
 
 const Root = styled.fieldset`

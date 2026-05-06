@@ -9,13 +9,13 @@ import { Stack } from './Stack.js';
 import { Typography } from './Typography.js';
 import { styled, css } from 'styled-components';
 import { Block } from './Block.js';
-import { usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation.js';
 import { Divider } from './Divider.js';
 
 interface Props {
-    readonly isOpen?: boolean;
-    readonly mainLinks: Work.MainLink[];
-    readonly socialLinks: Work.SocialLink[];
+    isOpen?: boolean;
+    mainLinks: Work.MainLink[];
+    socialLinks: Work.SocialLink[];
 }
 
 const Drawer = styled(Block)(({ theme }) => css`

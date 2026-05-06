@@ -3,7 +3,7 @@
 import { forwardRef } from 'react';
 
 interface ColorChipProps {
-    readonly color: { name: string; hex: string };
+    color: { name: string; hex: string };
 }
 
 export const ColorChip = forwardRef<HTMLDivElement, ColorChipProps>(({ color }, ref) => (

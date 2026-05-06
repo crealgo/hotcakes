@@ -1,6 +1,6 @@
 'use-client';
 
-import { type ImageProps as NextImageProps } from 'next/image';
+import { type ImageProps as NextImageProps } from 'next/image.js';
 import { forwardRef } from 'react';
 import { styled } from 'styled-components';
 import { useWindowSize } from './hooks/useWindowSize.js';
@@ -14,11 +14,11 @@ import { Typography } from './Typography.js';
 type ProjectCardRef = HTMLDivElement | HTMLAnchorElement;
 
 type ProjectCardProps = React.PropsWithChildren<{
-    readonly className?: string;
-    readonly orientation?: 'vertical' | 'horizontal';
-    readonly backgroundImage?: string;
-    readonly imageProps?: Partial<NextImageProps>;
-    readonly project: Work.Project;
+    className?: string;
+    orientation?: 'vertical' | 'horizontal';
+    backgroundImage?: string;
+    imageProps?: Partial<NextImageProps>;
+    project: Work.Project;
 }>;
 
 const CardContainer = styled(Container)`

@@ -1,13 +1,13 @@
 'use client';
 
 import clsx from 'clsx';
-import { Container } from './Container';
-import { IconButton } from './IconButton';
+import { Container } from './Container.js';
+import { IconButton } from './IconButton.js';
 import { forwardRef } from 'react';
 
 type LightBoxProps = {} & Partial<JSX.IntrinsicElements['div']>;
 
-export const LightBox = forwardRef<HTMLDivElement, LightBoxProps>((props, ref) => (
+export const LightBox = forwardRef<HTMLDivElement, LightBoxProps>((_props, ref) => (
     <div
         ref={ref}
         className={clsx([

@@ -13,8 +13,8 @@ declare module 'styled-components' {
     }
 }
 
-export const ThemeProvider: React.FC<React.PropsWithChildren> = ({ children }) => (
+export const ThemeProvider: React.FC<React.PropsWithChildren> = (props) => (
     <StyledThemeProvider theme={defaultTheme}>
-        {children}
+        {props.children}
     </StyledThemeProvider>
 );

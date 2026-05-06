@@ -1,13 +1,13 @@
 'use client';
 
 import { styled, css } from 'styled-components';
-import { Icon } from './Icon';
-import { Typography } from './Typography';
-import { createRipple } from './utils/createRipple';
-import { generateControlColors } from './utils/generateControlColors';
+import { Icon } from './Icon.js';
+import { Typography } from './Typography.js';
+import { createRipple } from './utils/createRipple.js';
+import { generateControlColors } from './utils/generateControlColors.js';
 
 type Props = ControlProps<HTMLDivElement> & React.ComponentPropsWithoutRef<'div'> & {
-    readonly isClickable?: boolean;
+    isClickable?: boolean;
 };
 
 const TagRoot = styled.div<UnforwardProps<Pick<Props, 'color' | 'variant' | 'isClickable'>>>((props) => css`

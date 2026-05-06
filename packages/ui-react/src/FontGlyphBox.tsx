@@ -3,9 +3,9 @@ import { useId } from 'react';
 import { styled, css } from 'styled-components';
 
 type FontGlyphBoxProps = {
-    readonly defaultValue?: string;
-    readonly children: string;
-    readonly name: string;
+    defaultValue?: string;
+    children: string;
+    name: string;
 } & Pick<React.ComponentPropsWithoutRef<'input'>, 'onChange' | 'aria-selected'>;
 
 const StyledLabel = styled.label(({ theme }) => css`

@@ -1,12 +1,12 @@
 'use client';
 
 import { styled, css } from 'styled-components';
-import { Icon } from './Icon';
-import { Typography } from './Typography';
+import { Icon } from './Icon.js';
+import { Typography } from './Typography.js';
 
 type HelperTextProps = React.PropsWithChildren<{
-    readonly icon?: string;
-    readonly center?: boolean;
+    icon?: string;
+    center?: boolean;
 }>;
 
 const HelperTextRoot = styled('div')<{ $center: boolean }>((props) => css`

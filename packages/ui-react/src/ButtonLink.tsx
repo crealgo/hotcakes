@@ -4,7 +4,7 @@ import { ButtonBase } from './ButtonBase.js';
 import { Icon } from './Icon.js';
 
 type Props = ControlProps<HTMLAnchorElement> & {
-    readonly href?: string;
+    href?: string;
 };
 
 export const ButtonLink: React.FC<Props> = (props) => (

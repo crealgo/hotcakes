@@ -10,14 +10,13 @@
   },
   "description": "",
   "exports": {
-    ".": "./dist/index.js",
-    "./*": "./dist/*.js"
-  },
-  "release": {
-    "extends": "@hotcakes/release-config"
+    ".": "./lib/index.js",
+    "./*": "./lib/*.js",
+    "./utils/*": "./lib/utils/*.js",
+    "./hooks/*": "./lib/hooks/*.js"
   },
   "files": [
-    "dist/**"
+    "lib/**"
   ],
   "license": "MIT",
   "publishConfig": {
@@ -25,11 +24,11 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "next": "^14.2.35",
     "styled-components": "^6.1.11",
-    "tailwindcss": "^3.4.4"
+    "tailwindcss": "^4.2.4"
   },
   "peerDependencies": {
+    "next": "^14.2.35",
     "react": "catalog:",
     "react-dom": "catalog:"
   },

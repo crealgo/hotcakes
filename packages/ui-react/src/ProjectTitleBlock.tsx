@@ -1,13 +1,13 @@
 'use client';
 
-import { Container } from './Container';
-import { Stack } from './Stack';
-import { Tag } from './Tag';
-import { TitleBox } from './TitleBox';
-import { Typography } from './Typography';
+import { Container } from './Container.js';
+import { Stack } from './Stack.js';
+import { Tag } from './Tag.js';
+import { TitleBox } from './TitleBox.js';
+import { Typography } from './Typography.js';
 
 type Props = React.ComponentPropsWithoutRef<'div'> & {
-    readonly projectInfo: Project.ProjectInfo;
+    projectInfo: Project.ProjectInfo;
 };
 
 export const ProjectTitleBlock: React.FC<Props> = (props) => {

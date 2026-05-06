@@ -1,12 +1,12 @@
 'use client';
 
-import { Content } from './Content';
-import { Typography } from './Typography';
+import { Content } from './Content.js';
+import { Typography } from './Typography.js';
 
 type TitleBoxProps = React.PropsWithChildren<{
-    readonly title?: React.ReactNode;
-    readonly subtitle?: React.ReactNode;
-    readonly description?: React.ReactNode;
+    title?: React.ReactNode;
+    subtitle?: React.ReactNode;
+    description?: React.ReactNode;
 }>;
 
 export const TitleBox: React.FC<TitleBoxProps> = (props) => (

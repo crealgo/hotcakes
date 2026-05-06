@@ -1,9 +1,9 @@
 'use client';
 
 export type SubtitleBoxProps = Pick<React.ComponentPropsWithoutRef<'div'>, 'className'> & {
-    readonly title: string;
-    readonly description?: React.ReactNode;
-    readonly helperText?: React.ReactNode;
+    title: string;
+    description?: React.ReactNode;
+    helperText?: React.ReactNode;
 };
 
 export const SubtitleBox: React.FC<SubtitleBoxProps> = (props) => (

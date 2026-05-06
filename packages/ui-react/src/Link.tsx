@@ -1,16 +1,15 @@
 'use client';
 
-import NextLink, { type LinkProps as NextLinkProps } from 'next/link';
-import { styled, css } from 'styled-components';
-import { Icon } from './Icon';
+import { css, styled } from 'styled-components';
+import { Icon } from './Icon.js';
 
-type LinkProps = React.PropsWithChildren<{
-    readonly active?: boolean;
-    readonly noUnderline?: boolean;
-    readonly icon?: string | React.ComponentType;
-}> & NextLinkProps;
+type LinkProps = React.ComponentPropsWithRef<'a'> & {
+    active?: boolean;
+    noUnderline?: boolean;
+    icon?: string | React.ComponentType;
+};
 
-const StyledLink = styled(NextLink)<{
+const StyledLink = styled.a<{
     $active?: boolean;
     $noUnderline?: boolean;
 }>((props) => css`
@@ -37,7 +36,6 @@ const StyledLink = styled(NextLink)<{
 export const Link: React.FC<LinkProps> = ({ noUnderline, active, ...props }) => (
     <StyledLink
         {...props}
-        prefetch
         $active={active}
         $noUnderline={noUnderline}
     >

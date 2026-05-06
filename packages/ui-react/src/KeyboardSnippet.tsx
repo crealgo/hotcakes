@@ -2,8 +2,8 @@ import { Fragment } from 'react';
 import { styled, css } from 'styled-components';
 
 interface Props {
-    readonly keys: string[];
-    readonly accent?: boolean;
+    keys: string[];
+    accent?: boolean;
 }
 
 const KeyboardSnippetRoot = styled.span<{ $accent: boolean }>((props) => css`

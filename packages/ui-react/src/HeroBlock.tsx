@@ -2,15 +2,15 @@
 
 import { styled, css } from 'styled-components';
 import { Block } from './Block.js';
-import { Container } from './Container';
-import { Content } from './Content';
-import { Divider } from './Divider';
-import { Image } from './Image';
-import { Link } from './Link';
-import { LinkLarge } from './LinkLarge';
-import { Mark } from './Mark';
-import { Stack } from './Stack';
-import { Typography } from './Typography';
+import { Container } from './Container.js';
+import { Content } from './Content.js';
+import { Divider } from './Divider.js';
+import { Image } from './Image.js';
+import { Link } from './Link.js';
+import { LinkLarge } from './LinkLarge.js';
+import { Mark } from './Mark.js';
+import { Stack } from './Stack.js';
+import { Typography } from './Typography.js';
 
 const HeroBlockContainer = styled(Container)(({ theme }) => css`
     display: grid;

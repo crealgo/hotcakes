@@ -7,16 +7,16 @@ import { Image, type ImageProps } from './Image.js';
 import { Typography } from './Typography.js';
 
 interface ImageContainerProps {
-    readonly hideImageOnMobile?: boolean;
-    // readonly backgroundType?: 'filled' | 'striped';
+    hideImageOnMobile?: boolean;
+    // backgroundType?: 'filled' | 'striped';
 }
 
 type Props = React.PropsWithChildren<{
-    readonly title?: React.ReactNode;
-    readonly subtitle?: React.ReactNode;
-    readonly description?: React.ReactNode;
-    readonly ImageProps?: ImageProps;
-    readonly ImageContainerProps?: ImageContainerProps;
+    title?: React.ReactNode;
+    subtitle?: React.ReactNode;
+    description?: React.ReactNode;
+    ImageProps?: ImageProps;
+    ImageContainerProps?: ImageContainerProps;
 }>;
 
 const Root = styled.div(({ theme }) => css`

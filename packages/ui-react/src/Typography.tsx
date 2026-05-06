@@ -1,7 +1,8 @@
 'use client';
 
-import { styled, css } from 'styled-components';
-import { type KnownTarget } from 'styled-components/dist/types';
+import { css, styled } from 'styled-components';
+
+type KnownTarget = 'span' | 'div' | 'p' | 'small' | 'h1' | 'h2' | 'h3';
 
 const withHeaderCSS = (strings: TemplateStringsArray) => css`
     font-family: Lora, serif;
@@ -66,9 +67,9 @@ const tagMap: Record<TypeVariant, KnownTarget> = {
 } as const;
 
 interface Props {
-    readonly hasBackground?: boolean;
-    readonly as?: KnownTarget;
-    readonly variant?: TypeVariant;
+    hasBackground?: boolean;
+    as?: KnownTarget;
+    variant?: TypeVariant;
 }
 
 export type TypographyProps = Props & React.HTMLAttributes<HTMLElement>;
@@ -82,7 +83,7 @@ export const Typography: React.FC<TypographyProps> = (props) => {
         <TypographyRoot
             {...props}
             as={resolvedElement}
-            $variant={props.variant}
+            $variant={props.variant ?? 'body1'}
         />
     );
 };

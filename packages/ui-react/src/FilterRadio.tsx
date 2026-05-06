@@ -4,7 +4,7 @@ import { forwardRef, useState } from 'react';
 import { createRipple } from './utils/createRipple.js';
 
 export type FilterRadioProps = {
-    readonly dot?: string;
+    dot?: string;
 } & Partial<JSX.IntrinsicElements['input']>;
 
 export const FilterRadio = forwardRef<HTMLInputElement, FilterRadioProps>((props, ref) => {

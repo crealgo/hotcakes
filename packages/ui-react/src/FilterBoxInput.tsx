@@ -4,11 +4,11 @@ import { forwardRef } from 'react';
 import { type FilterRadioGroupProps } from './FilterRadioGroup.js';
 
 type FilterBoxProps = Pick<HTMLElement, 'className'> & React.PropsWithChildren<{
-    readonly multiple?: boolean;
-    readonly filters?: Project.Tag[];
-    readonly label?: string;
-    readonly helperText?: string;
-    readonly onChange?: FilterRadioGroupProps['onChange'];
+    multiple?: boolean;
+    filters?: Project.Tag[];
+    label?: string;
+    helperText?: string;
+    onChange?: FilterRadioGroupProps['onChange'];
 }>;
 
 export const FilterBoxInput = forwardRef<HTMLDivElement, FilterBoxProps>((props, ref) => (

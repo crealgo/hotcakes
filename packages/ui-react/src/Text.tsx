@@ -1,11 +1,11 @@
 'use client';
 
 import { styled } from 'styled-components';
-import { Icon } from './Icon';
-import { Typography } from './Typography';
+import { Icon } from './Icon.js';
+import { Typography } from './Typography.js';
 
 type TextProps = React.PropsWithChildren<{
-    readonly icon?: string | React.ComponentType;
+    icon?: string | React.ComponentType;
 }>;
 
 const Root = styled(Typography)(({ theme }) => `

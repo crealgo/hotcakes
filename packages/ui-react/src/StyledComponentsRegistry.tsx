@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useServerInsertedHTML } from 'next/navigation';
+import { useServerInsertedHTML } from 'next/navigation.js';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 
 export default function StyledComponentsRegistry(props: React.PropsWithChildren) {
