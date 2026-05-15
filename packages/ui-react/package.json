@@ -3,11 +3,6 @@
   "version": "0.0.0-semantically-released",
   "type": "module",
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
-  "scripts": {
-    "build": "tsc --noEmit false --rootDir src --outDir dist",
-    "prepack": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "description": "",
   "exports": {
     ".": "./lib/index.js",
@@ -24,7 +19,7 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "styled-components": "^6.1.11",
+    "styled-components": "^6.4.1",
     "tailwindcss": "^4.2.4"
   },
   "peerDependencies": {
@@ -33,6 +28,7 @@
     "react-dom": "catalog:"
   },
   "devDependencies": {
+    "@storybook/react-vite": "^10.3.6",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "typescript": "catalog:",

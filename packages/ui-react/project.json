@@ -1,11 +1,12 @@
 {
-  "name": "hotcakes-core",
+  "name": "ui-react",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "targets": {
-    "build": {
+    "dev": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "tsc --build"
+        "command": "storybook",
+        "cwd": "{projectRoot}"
       },
       "cache": false
     }

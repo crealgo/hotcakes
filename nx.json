@@ -3,7 +3,9 @@
   "defaultBase": "main",
   "analytics": false,
   "release": {
-    "projects": ["packages/*"],
+    "projects": [
+      "packages/*"
+    ],
     "version": {
       "conventionalCommits": true,
       "preserveLocalDependencyProtocols": false

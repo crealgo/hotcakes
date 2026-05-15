@@ -2,13 +2,42 @@ packages:
   - "apps/*"
   - "packages/*"
 
+allowBuilds:
+  '@parcel/watcher': set this to true or false
+  '@swc/core': true
+  esbuild: true
+  nx: true
+
 catalog:
-  "@types/react": 18.x
-  "@types/react-dom": 18.x
+  "@types/react": ~18.3.28
+  "@types/react-dom": ~18.3.7
   eslint: 10.x
-  publint: 0.x
-  react: 18.x
-  react-dom: 18.x
+  publint: ~0.3.18
+  react: ~18.3.1
+  react-dom: ~18.3.1
   typescript: ~5.9.3
   vite: 4.x
-  vitest: 4.x
+  vitest: ~4.1.4
+
+minimumReleaseAgeExclude:
+  - got@11.8.5
+  - debug@2.6.9
+  - node-fetch@2.6.7
+  - parse-git-config@3.0.1
+  - cross-spawn@6.0.6
+  - tmp@0.2.4
+  - lodash@4.17.23
+  - next@15.5.10
+  - next@15.0.8
+  - semver@5.7.2
+  - next@15.5.13
+  - next@15.5.14
+  - brace-expansion@5.0.5
+  - yaml@2.8.3
+  - lodash@4.17.24
+  - next@15.5.15
+  - follow-redirects@1.15.12
+  - postcss@8.5.10
+  - axios@1.15.1
+  - axios@1.15.2
+  - next@15.5.16
