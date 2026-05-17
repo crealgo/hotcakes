@@ -5,7 +5,7 @@ import { Container } from './Container.js';
 import { IconButton } from './IconButton.js';
 import { forwardRef } from 'react';
 
-type LightBoxProps = {} & Partial<JSX.IntrinsicElements['div']>;
+type LightBoxProps = {} & Partial<React.ComponentPropsWithRef<'div'>>;
 
 export const LightBox = forwardRef<HTMLDivElement, LightBoxProps>((_props, ref) => (
     <div

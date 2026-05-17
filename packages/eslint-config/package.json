@@ -4,7 +4,7 @@
   "type": "module",
   "exports": {
     "./package.json": "./package.json",
-    ".": "./lib/index.js"
+    ".": "./index.js"
   },
   "dependencies": {
     "@eslint/js": "^9.39.4",

@@ -3,18 +3,18 @@ packages:
   - "packages/*"
 
 allowBuilds:
-  '@parcel/watcher': set this to true or false
-  '@swc/core': true
+  "@parcel/watcher": set this to true or false
+  "@swc/core": true
   esbuild: true
   nx: true
 
 catalog:
-  "@types/react": ~18.3.28
-  "@types/react-dom": ~18.3.7
+  "@types/react": 19.x
+  "@types/react-dom": 19.x
+  react: 19.x
+  react-dom: 19.x
   eslint: 10.x
   publint: ~0.3.18
-  react: ~18.3.1
-  react-dom: ~18.3.1
   typescript: ~5.9.3
   vite: 4.x
   vitest: ~4.1.4

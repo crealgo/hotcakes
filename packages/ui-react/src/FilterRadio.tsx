@@ -5,7 +5,7 @@ import { createRipple } from './utils/createRipple.js';
 
 export type FilterRadioProps = {
     dot?: string;
-} & Partial<JSX.IntrinsicElements['input']>;
+} & Partial<React.ComponentPropsWithRef<'input'>>;
 
 export const FilterRadio = forwardRef<HTMLInputElement, FilterRadioProps>((props, ref) => {
     const [, setFocused] = useState<boolean>(false);

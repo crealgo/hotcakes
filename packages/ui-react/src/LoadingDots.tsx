@@ -3,7 +3,7 @@
 import clsx from 'clsx';
 import { forwardRef } from 'react';
 
-type LoadingDotsProps = {} & Partial<JSX.IntrinsicElements['div']>;
+type LoadingDotsProps = {} & Partial<React.ComponentPropsWithRef<'div'>>;
 
 export const LoadingDots = forwardRef<HTMLDivElement, LoadingDotsProps>(
     ({ className, ...props }, ref) => (
