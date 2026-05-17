@@ -14,7 +14,7 @@ interface FrontMatter {
     categories: string[];
     tags: string[];
     published: string;
-    toc: { title: string; id: string }[];
+    toc: {title: string; id: string}[];
 }
 
 interface MDXImportModule {

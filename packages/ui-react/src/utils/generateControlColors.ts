@@ -1,6 +1,6 @@
 'use client';
 
-import { type DefaultTheme, css } from 'styled-components';
+import {type DefaultTheme, css} from 'styled-components';
 
 interface StyledProps {
     theme: DefaultTheme;
@@ -10,7 +10,7 @@ export const generateControlColors = (
     color: ControlColor = 'slate',
     variant: ControlVariant = 'contained',
     isInteractive = false
-) => ({ theme }: StyledProps) => ({
+) => ({theme}: StyledProps) => ({
     contained: css`
         border: solid 1px ${theme.color[color][300]};
         background-color: ${theme.color[color][100]};

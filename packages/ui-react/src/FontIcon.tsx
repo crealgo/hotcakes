@@ -1,6 +1,6 @@
 'use client';
 
-import { styled } from 'styled-components';
+import {styled} from 'styled-components';
 
 const FontIconRoot = styled.span`
     font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
@@ -13,7 +13,7 @@ interface FontIconProps {
 }
 
 export const FontIcon: React.FC<FontIconProps> = (props) => (
-    <FontIconRoot className="material-symbols-rounded">
+    <FontIconRoot className={'material-symbols-rounded'}>
         {props.icon}
     </FontIconRoot>
 );

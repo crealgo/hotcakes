@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { useServerInsertedHTML } from 'next/navigation.js';
-import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
+import {useServerInsertedHTML} from 'next/navigation.js';
+import {ServerStyleSheet, StyleSheetManager} from 'styled-components';
 
 export default function StyledComponentsRegistry(props: React.PropsWithChildren) {
     // Only create stylesheet once with lazy initial state

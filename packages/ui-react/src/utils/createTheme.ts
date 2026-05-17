@@ -1,8 +1,8 @@
 'use client';
 
-import { createBreakpoints } from './createBreakpoints.js';
-import { createColors } from './createColors.js';
-import { createShadows } from './createShadows.js';
+import {createBreakpoints} from './createBreakpoints.js';
+import {createColors} from './createColors.js';
+import {createShadows} from './createShadows.js';
 
 const breakpoint = createBreakpoints();
 const color = createColors();

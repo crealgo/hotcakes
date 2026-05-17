@@ -56,7 +56,7 @@ export class AnchorElement implements hast.Element {
     children: hast.ElementContent[] = [];
 
     constructor(href: string, children: hast.ElementContent[]) {
-        this.properties = { href };
+        this.properties = {href};
         this.children.push(...children);
     }
 }

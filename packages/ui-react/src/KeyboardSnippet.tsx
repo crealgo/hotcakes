@@ -1,12 +1,12 @@
-import { Fragment } from 'react';
-import { styled, css } from 'styled-components';
+import {Fragment} from 'react';
+import {styled, css} from 'styled-components';
 
 interface Props {
     keys: string[];
     accent?: boolean;
 }
 
-const KeyboardSnippetRoot = styled.span<{ $accent: boolean }>((props) => css`
+const KeyboardSnippetRoot = styled.span<{$accent: boolean}>((props) => css`
     --color: ${props.theme.color.slate[600]};
 
     --kbd-background-color: ${props.theme.color.slate[50]};

@@ -1,14 +1,14 @@
 'use client';
 
 import clsx from 'clsx';
-import { useState } from 'react';
-import { styled } from 'styled-components';
-import { FontDisplaySection } from './FontDisplaySection.js';
-import { FontGlyphBox } from './FontGlyphBox.js';
-import { FontGlyphBoxWrapper } from './FontGlyphBoxWrapper.js';
-import { HelperText } from './HelperText.js';
-import { Mark } from './Mark.js';
-import { getRandomIndex } from './utils/getRandomIndex.js';
+import {useState} from 'react';
+import {styled} from 'styled-components';
+import {FontDisplaySection} from './FontDisplaySection.js';
+import {FontGlyphBox} from './FontGlyphBox.js';
+import {FontGlyphBoxWrapper} from './FontGlyphBoxWrapper.js';
+import {HelperText} from './HelperText.js';
+import {Mark} from './Mark.js';
+import {getRandomIndex} from './utils/getRandomIndex.js';
 
 interface FontsDisplayProps {
     fontUrl: string;
@@ -44,7 +44,7 @@ const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789!@#$
 const CHAR_ARRAY = CHARS.split('');
 const randomChar = CHAR_ARRAY.at(getRandomIndex(CHARS.length)) ?? 'A';
 
-const FontDisplayRoot = styled.div<{ $font: string }>`
+const FontDisplayRoot = styled.div<{$font: string}>`
     display: grid;
     gap: 2rem;
     grid-template-areas: 'snippet snippet' 'glyph characters';
@@ -69,30 +69,30 @@ export const FontsDisplayFamily: React.FC<FontsDisplayProps> = (props) => {
             </style>
             <FontDisplayRoot $font={fontInfo.name}>
                 <FontDisplaySection
-                    area="snippet"
+                    area={'snippet'}
                     title={(
                         <>
-                            Font Family:
+                            {'Font Family:'}
                             {' '}
                             <Mark>{fontInfo.name}</Mark>
                         </>
                     )}
                     helperText={(
-                        <HelperText icon="text_fields">
-                            This content is editable. Click to type!
+                        <HelperText icon={'text_fields'}>
+                            {'This content is editable. Click to type!'}
                         </HelperText>
                     )}
                 >
-                    <div className="py-5 leading-tighter text-4xl md:text-6xl">
-                        <span contentEditable>The quick brown fox jumped over the lazy dog.</span>
+                    <div className={'py-5 leading-tighter text-4xl md:text-6xl'}>
+                        <span contentEditable>{'The quick brown fox jumped over the lazy dog.'}</span>
                     </div>
                 </FontDisplaySection>
                 <FontDisplaySection
-                    area="glyph"
-                    title="Glyph"
+                    area={'glyph'}
+                    title={'Glyph'}
                     helperText={(
-                        <HelperText icon="web_traffic">
-                            Pick a character to get a closer look.
+                        <HelperText icon={'web_traffic'}>
+                            {'Pick a character to get a closer look.'}
                         </HelperText>
                     )}
                 >
@@ -105,7 +105,7 @@ export const FontsDisplayFamily: React.FC<FontsDisplayProps> = (props) => {
                         <span data-font>{characterGlyph}</span>
                     </div>
                 </FontDisplaySection>
-                <FontDisplaySection area="characters" title="Characters">
+                <FontDisplaySection area={'characters'} title={'Characters'}>
                     <FontGlyphBoxWrapper>
                         {CHAR_ARRAY.map((char) => (
                             <FontGlyphBox

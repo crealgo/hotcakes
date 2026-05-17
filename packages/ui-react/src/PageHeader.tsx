@@ -1,10 +1,10 @@
 'use client';
 
-import { styled, css } from 'styled-components';
-import { Container } from './Container.js';
-import { Content } from './Content.js';
-import { Image, type ImageProps } from './Image.js';
-import { Typography } from './Typography.js';
+import {styled, css} from 'styled-components';
+import {Container} from './Container.js';
+import {Content} from './Content.js';
+import {Image, type ImageProps} from './Image.js';
+import {Typography} from './Typography.js';
 
 interface ImageContainerProps {
     hideImageOnMobile?: boolean;
@@ -19,7 +19,7 @@ type Props = React.PropsWithChildren<{
     ImageContainerProps?: ImageContainerProps;
 }>;
 
-const Root = styled.div(({ theme }) => css`
+const Root = styled.div(({theme}) => css`
     position: relative;
     padding-block: ${theme.spacing(3)};
 
@@ -37,7 +37,7 @@ const Root = styled.div(({ theme }) => css`
     }
 `);
 
-const ImageContainer = styled.div<UnforwardProps<Pick<ImageContainerProps, 'hideImageOnMobile'>>>(({ theme, ...props }) => css`
+const ImageContainer = styled.div<UnforwardProps<Pick<ImageContainerProps, 'hideImageOnMobile'>>>(({theme, ...props}) => css`
     --bg-filled: ${theme.color.brand[200]};
     --bg-striped: repeating-radial-gradient(circle, ${theme.color.brand[200]}, ${theme.color.brand[200]} 5px, transparent 5px, transparent 20px);
 
@@ -87,15 +87,15 @@ export const PageHeader: React.FC<Props> = (props) => (
     <Root>
         <Container>
             <Content>
-                {props.title && <Typography variant="display1">{props.title}</Typography>}
-                {props.subtitle && <Typography variant="display2">{props.subtitle}</Typography>}
-                {props.description && <Typography variant="body1">{props.description}</Typography>}
-                {props.children && <div className="mt-10 lg:mt-12">{props.children}</div>}
+                {props.title && <Typography variant={'display1'}>{props.title}</Typography>}
+                {props.subtitle && <Typography variant={'display2'}>{props.subtitle}</Typography>}
+                {props.description && <Typography variant={'body1'}>{props.description}</Typography>}
+                {props.children && <div className={'mt-10 lg:mt-12'}>{props.children}</div>}
             </Content>
         </Container>
         {props.ImageProps && (
             <ImageContainer $hideImageOnMobile={Boolean(props.ImageContainerProps?.hideImageOnMobile)}>
-                <Image aspectRatio="4/3" {...props.ImageProps} />
+                <Image aspectRatio={'4/3'} {...props.ImageProps} />
             </ImageContainer>
         )}
     </Root>

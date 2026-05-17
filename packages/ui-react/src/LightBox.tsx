@@ -1,9 +1,9 @@
 'use client';
 
 import clsx from 'clsx';
-import { Container } from './Container.js';
-import { IconButton } from './IconButton.js';
-import { forwardRef } from 'react';
+import {Container} from './Container.js';
+import {IconButton} from './IconButton.js';
+import {forwardRef} from 'react';
 
 type LightBoxProps = {} & Partial<React.ComponentPropsWithRef<'div'>>;
 
@@ -22,28 +22,28 @@ export const LightBox = forwardRef<HTMLDivElement, LightBoxProps>((_props, ref) 
                 'bg-white bg-opacity-60'
             ])}
         >
-            <Container className="flex items-center h-full">
-                <div className="subtitle1 inline-flex mr-auto">Gallery (2/127)</div>
-                <div className="subtitle1 inline-flex">
+            <Container className={'flex items-center h-full'}>
+                <div className={'subtitle1 inline-flex mr-auto'}>{'Gallery (2/127)'}</div>
+                <div className={'subtitle1 inline-flex'}>
                     <IconButton
-                        variant="outlined"
-                        icon="menu"
+                        variant={'outlined'}
+                        icon={'menu'}
                     />
                 </div>
             </Container>
         </div>
-        <div className="absolute w-full h-full">
+        <div className={'absolute w-full h-full'}>
             <div
-                className="w-full h-full bg-contain bg-no-repeat bg-center will-change-transform"
-                style={{ backgroundImage: 'url(/assets/doodles/code.svg)' }}
+                className={'w-full h-full bg-contain bg-no-repeat bg-center will-change-transform'}
+                style={{backgroundImage: 'url(/assets/doodles/code.svg)'}}
             />
             <div
-                className="w-full h-full bg-contain bg-no-repeat bg-center will-change-transform"
-                style={{ backgroundImage: 'url(/assets/doodles/code.svg)' }}
+                className={'w-full h-full bg-contain bg-no-repeat bg-center will-change-transform'}
+                style={{backgroundImage: 'url(/assets/doodles/code.svg)'}}
             />
             <div
-                className="w-full h-full bg-contain bg-no-repeat bg-center will-change-transform"
-                style={{ backgroundImage: 'url(/assets/doodles/code.svg)' }}
+                className={'w-full h-full bg-contain bg-no-repeat bg-center will-change-transform'}
+                style={{backgroundImage: 'url(/assets/doodles/code.svg)'}}
             />
         </div>
     </div>

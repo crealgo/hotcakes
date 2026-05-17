@@ -1,8 +1,8 @@
 'use client';
 
-import { styled, css } from 'styled-components';
+import {styled, css} from 'styled-components';
 
-export const MDXContent = styled.div(({ theme }) => css`
+export const MDXContent = styled.div(({theme}) => css`
     --content-x-spacing: 2rem;
     --content-x-width: ${theme.breakpoint.values.md}px;
     --aside-x-width: calc(${theme.breakpoint.values.md}px - var(--content-x-width));

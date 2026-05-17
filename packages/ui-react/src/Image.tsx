@@ -1,9 +1,9 @@
 'use client';
 
 import clsx from 'clsx';
-import { useState } from 'react';
-import { css, styled } from 'styled-components';
-import { LoadingDots } from './LoadingDots.js';
+import {useState} from 'react';
+import {css, styled} from 'styled-components';
+import {LoadingDots} from './LoadingDots.js';
 
 const ImageElement = styled.img`
     width: 100%;
@@ -65,16 +65,16 @@ export const Image: React.FC<ImageProps> = ({
             $aspectRatio={aspectRatio}
             className={clsx('Image-root', className)}
         >
-            {isLoading && <LoadingDots className="absolute" />}
+            {isLoading && <LoadingDots className={'absolute'} />}
             <ImageElement
                 // unoptimized
                 alt={props.alt}
                 src={props.src}
-                loading="lazy"
+                loading={'lazy'}
                 // layout="fill"
                 // objectFit="cover"
                 // loader={(props: { src: string }) => props.src}
-                className={clsx({ loaded: imageLoaded })}
+                className={clsx({loaded: imageLoaded})}
                 onLoad={() => {
                     setImageLoaded(true);
                 }}

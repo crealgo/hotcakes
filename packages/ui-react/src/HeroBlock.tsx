@@ -1,18 +1,18 @@
 'use client';
 
-import { styled, css } from 'styled-components';
-import { Block } from './Block.js';
-import { Container } from './Container.js';
-import { Content } from './Content.js';
-import { Divider } from './Divider.js';
-import { Image } from './Image.js';
-import { Link } from './Link.js';
-import { LinkLarge } from './LinkLarge.js';
-import { Mark } from './Mark.js';
-import { Stack } from './Stack.js';
-import { Typography } from './Typography.js';
+import {styled, css} from 'styled-components';
+import {Block} from './Block.js';
+import {Container} from './Container.js';
+import {Content} from './Content.js';
+import {Divider} from './Divider.js';
+import {Image} from './Image.js';
+import {Link} from './Link.js';
+import {LinkLarge} from './LinkLarge.js';
+import {Mark} from './Mark.js';
+import {Stack} from './Stack.js';
+import {Typography} from './Typography.js';
 
-const HeroBlockContainer = styled(Container)(({ theme }) => css`
+const HeroBlockContainer = styled(Container)(({theme}) => css`
     display: grid;
     padding-block: ${theme.spacing(4)};
     grid-template-columns: 1fr;
@@ -24,7 +24,7 @@ const HeroBlockContainer = styled(Container)(({ theme }) => css`
     }
 `);
 
-const ImageWrapper = styled.div(({ theme }) => css`
+const ImageWrapper = styled.div(({theme}) => css`
     position: relative;
     display: none;
     align-items: center;
@@ -46,28 +46,28 @@ export const HeroBlock: React.FC<Props> = (props) => (
         <HeroBlockContainer>
             <div>
                 <Content>
-                    <Typography variant="display1">
-                        Hello there! 👋
+                    <Typography variant={'display1'}>
+                        {'Hello there! 👋'}
                     </Typography>
-                    <Typography variant="body1">
-                        Nice to meet you. I'm
+                    <Typography variant={'body1'}>
+                        {'Nice to meet you. I\'m'}
                         {' '}
-                        <Mark>Manas</Mark>
-                        , a designer and developer based in
-                        Davenport, IA. I have been designing and making things for 10 years now – for
+                        <Mark>{'Manas'}</Mark>
+                        {', a designer and developer based in'}
+                        {'Davenport, IA. I have been designing and making things for 10 years now – for'}
                         {' '}
-                        <em>myself</em>
-                        , for
-                        <em>clients</em>
-                        , and, most importantly,
+                        <em>{'myself'}</em>
+                        {', for'}
+                        <em>{'clients'}</em>
+                        {', and, most importantly,'}
                         {' '}
-                        <em>for fun</em>
-                        . Check out my work, browse the site,
-                        or
-                        <Link href="mailto:manaschimpidi@gmail.com">contact me</Link>
+                        <em>{'for fun'}</em>
+                        {'. Check out my work, browse the site,'}
+                        {'or'}
+                        <Link href={'mailto:manaschimpidi@gmail.com'}>{'contact me'}</Link>
                         {' '}
-                        if you
-                        would like to work together.
+                        {'if you'}
+                        {'would like to work together.'}
                     </Typography>
                 </Content>
                 {/* <hr className='my-6'/> */}
@@ -79,7 +79,7 @@ export const HeroBlock: React.FC<Props> = (props) => (
             </div> */}
                 <Divider />
                 <nav>
-                    <Typography variant="h3">Quick Links</Typography>
+                    <Typography variant={'h3'}>{'Quick Links'}</Typography>
                     <Stack gap={1}>
                         {props.mainLinks.slice(1).map((link) => (
                             <LinkLarge key={link.slug} href={link.url}>
@@ -90,7 +90,7 @@ export const HeroBlock: React.FC<Props> = (props) => (
                 </nav>
             </div>
             <ImageWrapper>
-                <Image aspectRatio="1/1" alt="Manas Chimpidi" src="/assets/manas.jpg" />
+                <Image aspectRatio={'1/1'} alt={'Manas Chimpidi'} src={'/assets/manas.jpg'} />
             </ImageWrapper>
         </HeroBlockContainer>
     </Block>

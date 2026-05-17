@@ -1,7 +1,7 @@
 'use client';
 
-import { forwardRef, useState } from 'react';
-import { createRipple } from './utils/createRipple.js';
+import {forwardRef, useState} from 'react';
+import {createRipple} from './utils/createRipple.js';
 
 export type FilterRadioProps = {
     dot?: string;
@@ -27,7 +27,7 @@ export const FilterRadio = forwardRef<HTMLInputElement, FilterRadioProps>((props
             <input
                 {...props}
                 ref={ref}
-                type="radio"
+                type={'radio'}
                 onFocus={(event) => {
                     props.onFocus?.(event);
                     setFocused(true);

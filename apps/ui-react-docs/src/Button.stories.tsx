@@ -1,13 +1,10 @@
-import { Meta, StoryFn } from '@storybook/react-vite';
-import { Button } from '@hotcakes/ui-react/Button'
+import {Meta, StoryFn} from '@storybook/react-vite';
+import {Button} from '@hotcakes/ui-react/Button';
 
-
-const meta = {
+export default {
     title: 'Button'
 } satisfies Meta;
 
 export const Primary: StoryFn = (args) => (
-    <Button {...args}>{'This is a button'}</Button>
+    <Button {...args}>{'content'}</Button>
 );
-
-export default meta;

@@ -1,7 +1,7 @@
 'use client';
 
-import { styled } from 'styled-components';
-import { Link } from './Link.js';
+import {styled} from 'styled-components';
+import {Link} from './Link.js';
 
 export const SkipLink = styled(Link)`
     display: inline-block;

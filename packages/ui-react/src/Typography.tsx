@@ -1,6 +1,6 @@
 'use client';
 
-import { css, styled } from 'styled-components';
+import {css, styled} from 'styled-components';
 
 type KnownTarget = 'span' | 'div' | 'p' | 'small' | 'h1' | 'h2' | 'h3';
 
@@ -74,7 +74,7 @@ interface Props {
 
 export type TypographyProps = Props & React.HTMLAttributes<HTMLElement>;
 
-const TypographyRoot = styled.p<{ $variant: TypeVariant }>((props) => styleMap[props.$variant]);
+const TypographyRoot = styled.p<{$variant: TypeVariant}>((props) => styleMap[props.$variant]);
 
 export const Typography: React.FC<TypographyProps> = (props) => {
     const resolvedElement = props.as ?? tagMap[props.variant ?? 'body1'];

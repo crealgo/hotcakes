@@ -1,8 +1,8 @@
 'use client';
 
-import { createGlobalStyle, css } from 'styled-components';
+import {createGlobalStyle, css} from 'styled-components';
 
-export const GlobalStyles = createGlobalStyle(({ theme }) => css`
+export const GlobalStyles = createGlobalStyle(({theme}) => css`
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)

@@ -1,6 +1,6 @@
 'use client';
 
-import { styled, css } from 'styled-components';
+import {styled, css} from 'styled-components';
 
 export const Container = styled.div((props) => css`
     margin-left: auto;

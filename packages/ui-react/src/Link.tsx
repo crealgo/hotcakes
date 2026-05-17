@@ -1,7 +1,7 @@
 'use client';
 
-import { css, styled } from 'styled-components';
-import { Icon } from './Icon.js';
+import {css, styled} from 'styled-components';
+import {Icon} from './Icon.js';
 
 type LinkProps = React.ComponentPropsWithRef<'a'> & {
     active?: boolean;
@@ -33,13 +33,13 @@ const StyledLink = styled.a<{
     }
 `);
 
-export const Link: React.FC<LinkProps> = ({ noUnderline, active, ...props }) => (
+export const Link: React.FC<LinkProps> = ({noUnderline, active, ...props}) => (
     <StyledLink
         {...props}
         $active={active}
         $noUnderline={noUnderline}
     >
         {props.icon && <Icon icon={props.icon} />}
-        <span className="Link-text">{props.children}</span>
+        <span className={'Link-text'}>{props.children}</span>
     </StyledLink>
 );

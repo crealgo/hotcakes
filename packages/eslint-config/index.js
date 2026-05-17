@@ -1,4 +1,4 @@
-import { defineConfig, globalIgnores } from 'eslint/config';
+import {defineConfig, globalIgnores} from 'eslint/config';
 import js from '@eslint/js';
 import ts from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
@@ -24,7 +24,10 @@ export default defineConfig([
     {
         rules: {
             '@stylistic/quote-props': ['error', 'as-needed'],
-            '@stylistic/multiline-ternary': ['error', 'never']
+            '@stylistic/multiline-ternary': ['error', 'never'],
+            '@stylistic/object-curly-spacing': ['error', 'never'],
+            '@stylistic/block-spacing': ['error', 'never'],
+            '@stylistic/jsx-curly-brace-presence': ['error', 'always']
         }
     }
 ]);

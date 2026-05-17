@@ -1,7 +1,7 @@
 'use client';
 
-import { styled, css } from 'styled-components';
-import { generateControlColors } from './utils/generateControlColors.js';
+import {styled, css} from 'styled-components';
+import {generateControlColors} from './utils/generateControlColors.js';
 
 export const ButtonBase = styled.button.withConfig({
     shouldForwardProp: (prop) => !/variant|color|icon|shape/g.test(prop)

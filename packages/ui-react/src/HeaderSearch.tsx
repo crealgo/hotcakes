@@ -1,11 +1,11 @@
 'use client';
 
-import { useRouter } from 'next/navigation.js';
-import { useEffect, useRef } from 'react';
-import { styled, css } from 'styled-components';
-import { Block } from './Block.js';
-import { Container } from './Container.js';
-import { IconButton } from './IconButton.js';
+import {useRouter} from 'next/navigation.js';
+import {useEffect, useRef} from 'react';
+import {styled, css} from 'styled-components';
+import {Block} from './Block.js';
+import {Container} from './Container.js';
+import {IconButton} from './IconButton.js';
 
 interface Props {
     onClose: () => void;
@@ -82,7 +82,7 @@ const SearchClearButton = styled(IconButton)/* css */`
     right: 0;
 `;
 
-export const HeaderSearch: React.FC<Props> = ({ isOpen = false, onClose }) => {
+export const HeaderSearch: React.FC<Props> = ({isOpen = false, onClose}) => {
     const router = useRouter();
 
     const refs = {
@@ -137,17 +137,17 @@ export const HeaderSearch: React.FC<Props> = ({ isOpen = false, onClose }) => {
             <SearchContainer data-open={isOpen}>
                 <SearchInput
                     ref={refs.input}
-                    aria-label="Search"
-                    id="search"
-                    name="search"
-                    placeholder="Search"
+                    aria-label={'Search'}
+                    id={'search'}
+                    name={'search'}
+                    placeholder={'Search'}
                     onKeyDown={handleKeyDown}
                     onChange={handleChange}
                 />
                 <SearchClearButton
                     ref={refs.button}
                     contrast
-                    icon="close"
+                    icon={'close'}
                     onClick={(event) => {
                         event.preventDefault();
 
