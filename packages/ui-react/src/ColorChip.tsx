@@ -2,7 +2,7 @@
 
 import {forwardRef} from 'react';
 
-interface ColorChipProps {
+export interface ColorChipProps {
     color: {name: string; hex: string};
 }
 
