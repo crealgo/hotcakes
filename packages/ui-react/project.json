@@ -1,3 +1,12 @@
 {
-  "name": "ui-react"
+  "name": "ui-react",
+  "targets": {
+    "build-css": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpx @tailwindcss/cli --input ./src/index.css --output ./lib/index.css",
+        "cwd": "{projectRoot}"
+      }
+    }
+  }
 }

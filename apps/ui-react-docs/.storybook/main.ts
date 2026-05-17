@@ -1,4 +1,5 @@
-import type { StorybookConfig } from '@storybook/react-vite';
+import type {StorybookConfig} from '@storybook/react-vite';
+import tailwindcss from '@tailwindcss/vite';
 
 const config: StorybookConfig = {
     framework: '@storybook/react-vite',
@@ -6,6 +7,10 @@ const config: StorybookConfig = {
     addons: ['@storybook/addon-vitest'],
     viteFinal: (config) => ({
         ...config,
+        plugins: [
+            ...config.plugins ?? [],
+            tailwindcss()
+        ],
         optimizeDeps: {
             ...config.optimizeDeps,
             include: [

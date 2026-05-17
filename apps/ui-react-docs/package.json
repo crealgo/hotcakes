@@ -5,19 +5,20 @@
     "@hotcakes/ui-react": "workspace:^",
     "@storybook/addon-vitest": "10.3.6",
     "@storybook/react-vite": "10.3.6",
+    "@tailwindcss/vite": "^4.3.0",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@vitejs/plugin-react": "*",
+    "@vitest/browser-playwright": "4.1.4",
+    "@vitest/coverage-v8": "4.1.4",
     "next": "^14.2.35",
+    "playwright": "^1.60.0",
     "react": "catalog:",
     "react-dom": "catalog:",
     "storybook": "10.3.6",
     "styled-components": "^6.4.1",
     "tailwindcss": "^4.2.4",
     "typescript": "catalog:",
-    "vitest": "catalog:",
-    "playwright": "^1.60.0",
-    "@vitest/browser-playwright": "4.1.4",
-    "@vitest/coverage-v8": "4.1.4"
+    "vitest": "catalog:"
   }
 }
