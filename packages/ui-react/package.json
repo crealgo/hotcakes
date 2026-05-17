@@ -5,7 +5,7 @@
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "description": "",
   "exports": {
-    ".": "./lib/index.js",
+    "./package.json": "./package.json",
     "./*": "./lib/*.js",
     "./utils/*": "./lib/utils/*.js",
     "./hooks/*": "./lib/hooks/*.js"
@@ -28,7 +28,6 @@
     "react-dom": "catalog:"
   },
   "devDependencies": {
-    "@storybook/react-vite": "^10.3.6",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "typescript": "catalog:",

@@ -1,0 +1,18 @@
+{
+  "name": "@hotcakes/ui-react-docs",
+  "type": "module",
+  "devDependencies": {
+    "@hotcakes/ui-react": "workspace:^",
+    "@storybook/react-vite": "^10.3.6",
+    "tailwindcss": "^4.2.4",
+    "styled-components": "^6.4.1",
+    "next": "^14.2.35",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "@vitejs/plugin-react": "*",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

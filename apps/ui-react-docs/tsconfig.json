@@ -6,12 +6,17 @@
     "outDir": "./lib",
     "jsx": "react-jsx"
   },
-  "include": [
-    "src"
-  ],
+  "include": ["stories"],
   "exclude": [
     "node_modules",
-    "dist",
-    "lib"
+    "**/*.stories.ts",
+    "**/*.stories.js",
+    "**/*.stories.jsx",
+    "**/*.stories.tsx"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.storybook.json"
+    }
   ]
 }
