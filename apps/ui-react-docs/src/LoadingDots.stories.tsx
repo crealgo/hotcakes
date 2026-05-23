@@ -5,6 +5,4 @@ export default {
     title: 'LoadingDots'
 } satisfies Meta;
 
-export const Primary: StoryFn = (args) => (
-    <LoadingDots {...args}>{'content'}</LoadingDots>
-);
+export const Primary: StoryFn = () => <LoadingDots />;

@@ -5,6 +5,10 @@ export default {
     title: 'FontsDisplayFamily'
 } satisfies Meta;
 
-export const Primary: StoryFn = (args) => (
-    <FontsDisplayFamily {...args}>{'content'}</FontsDisplayFamily>
+export const Lora: StoryFn = () => (
+    <FontsDisplayFamily fontUrl={'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap'} />
+);
+
+export const NotoSans: StoryFn = () => (
+    <FontsDisplayFamily fontUrl={'https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'} />
 );

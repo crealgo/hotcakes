@@ -5,6 +5,10 @@ export default {
     title: 'HeaderSearch'
 } satisfies Meta;
 
-export const Primary: StoryFn = (args) => (
-    <HeaderSearch {...args}>{'content'}</HeaderSearch>
+export const Open: StoryFn = () => (
+    <HeaderSearch isOpen onClose={() => {}} />
+);
+
+export const Closed: StoryFn = () => (
+    <HeaderSearch isOpen={false} onClose={() => {}} />
 );

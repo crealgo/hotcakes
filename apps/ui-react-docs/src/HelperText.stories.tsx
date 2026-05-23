@@ -5,6 +5,10 @@ export default {
     title: 'HelperText'
 } satisfies Meta;
 
-export const Primary: StoryFn = (args) => (
-    <HelperText {...args}>{'content'}</HelperText>
+export const Primary: StoryFn = () => (
+    <div style={{display: 'flex', flexDirection: 'column', gap: '0.5rem'}}>
+        <HelperText>{'This field is required'}</HelperText>
+        <HelperText icon={'info'}>{'Supported formats: PNG, JPG, SVG'}</HelperText>
+        <HelperText icon={'warning'} center>{'Centered helper text'}</HelperText>
+    </div>
 );

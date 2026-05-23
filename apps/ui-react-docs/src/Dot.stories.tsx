@@ -5,6 +5,8 @@ export default {
     title: 'Dot'
 } satisfies Meta;
 
-export const Primary: StoryFn = (args) => (
-    <Dot {...args}>{'content'}</Dot>
+export const Primary: StoryFn = () => (
+    <p>
+        {'Separate'} <Dot /> {'these'} <Dot /> {'words'}
+    </p>
 );

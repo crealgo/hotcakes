@@ -5,6 +5,8 @@ export default {
     title: 'LightBox'
 } satisfies Meta;
 
-export const Primary: StoryFn = (args) => (
-    <LightBox {...args}>{'content'}</LightBox>
+export const Primary: StoryFn = () => (
+    <div style={{position: 'relative', height: '600px', overflow: 'hidden'}}>
+        <LightBox />
+    </div>
 );

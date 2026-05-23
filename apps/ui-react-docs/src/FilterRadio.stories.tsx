@@ -5,6 +5,11 @@ export default {
     title: 'FilterRadio'
 } satisfies Meta;
 
-export const Primary: StoryFn = (args) => (
-    <FilterRadio {...args}>{'content'}</FilterRadio>
+export const Primary: StoryFn = () => (
+    <div style={{display: 'flex', gap: '0.5rem', flexWrap: 'wrap'}}>
+        <FilterRadio id={'all'} name={'filter'} value={'all'} defaultChecked>{'All'}</FilterRadio>
+        <FilterRadio id={'design'} name={'filter'} value={'design'}>{'Design'}</FilterRadio>
+        <FilterRadio id={'development'} name={'filter'} value={'development'}>{'Development'}</FilterRadio>
+        <FilterRadio id={'branding'} name={'filter'} value={'branding'}>{'Branding'}</FilterRadio>
+    </div>
 );
