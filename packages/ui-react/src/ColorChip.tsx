@@ -2,8 +2,9 @@
 
 import {forwardRef} from 'react';
 
-export interface ColorChipProps {
-    color: {name: string; hex: string};
+interface ColorChipProps {
+    name: string;
+    hex: string;
 }
 
 export const ColorChip = forwardRef<HTMLDivElement, ColorChipProps>((props, ref) => (
@@ -15,12 +16,12 @@ export const ColorChip = forwardRef<HTMLDivElement, ColorChipProps>((props, ref)
             <div
                 className={'w-full aspect-square overflow-hidden rounded-t-md p-2 border-b border-slate-300'}
                 style={{
-                    backgroundColor: props.color.hex
+                    backgroundColor: props.hex
                 }}
             />
             <div className={'px-3 py-2'}>
-                <div className={'subtitle1 truncate'}>{props.color.name}</div>
-                <div className={'font-mono text-slate-500 text-sm'}>{props.color.hex}</div>
+                <div className={'subtitle1 truncate'}>{props.name}</div>
+                <div className={'font-mono text-slate-500 text-sm'}>{props.hex}</div>
             </div>
         </div>
     </div>

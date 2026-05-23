@@ -14,12 +14,16 @@
         "command": "tsc --build"
       },
       "configurations": {
-        "watch": {
-          "args": "--watch"
-        },
         "force": {
           "args": "--force"
         }
+      }
+    },
+    "dev": {
+      "continuous": true,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc --build --watch"
       }
     }
   }
