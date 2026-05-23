@@ -7,7 +7,9 @@ export default {
 
 export const Primary: StoryFn = () => (
     <p>
-        {'This is a paragraph with a '}<Mark>{'highlighted phrase'}</Mark>{' in the middle.'}
+        {'This is a paragraph with a '}
+        <Mark>{'highlighted phrase'}</Mark>
+        {' in the middle.'}
     </p>
 );
 

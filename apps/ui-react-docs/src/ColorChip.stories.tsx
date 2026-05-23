@@ -23,7 +23,7 @@ export default {
 export const Primary: StoryFn<Args> = (args) => (
     <>
         {args.colors.map((chip) => (
-            <ColorChip {...chip}>{'content'}</ColorChip>
+            <ColorChip key={chip.hex} {...chip} />
         ))}
     </>
 );

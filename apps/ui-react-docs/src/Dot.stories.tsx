@@ -7,6 +7,14 @@ export default {
 
 export const Primary: StoryFn = () => (
     <p>
-        {'Separate'} <Dot /> {'these'} <Dot /> {'words'}
+        {'Separate'}
+        {' '}
+        <Dot />
+        {' '}
+        {'these'}
+        {' '}
+        <Dot />
+        {' '}
+        {'words'}
     </p>
 );

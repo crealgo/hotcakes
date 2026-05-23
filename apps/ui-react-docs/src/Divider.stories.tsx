@@ -8,18 +8,18 @@ export default {
 
 export const Primary: StoryFn = () => (
     <div>
-        <Typography variant={'body1'}>Content above</Typography>
+        <Typography variant={'body1'}>{'Content above'}</Typography>
         <Divider />
-        <Typography variant={'body1'}>Content below</Typography>
+        <Typography variant={'body1'}>{'Content below'}</Typography>
     </div>
 );
 
 export const CustomSpacing: StoryFn = () => (
     <div>
-        <Typography variant={'body1'}>Above</Typography>
+        <Typography variant={'body1'}>{'Above'}</Typography>
         <Divider spacing={[1, 1]} />
-        <Typography variant={'body1'}>Tight spacing</Typography>
+        <Typography variant={'body1'}>{'Tight spacing'}</Typography>
         <Divider spacing={[4, 2]} />
-        <Typography variant={'body1'}>Wide spacing</Typography>
+        <Typography variant={'body1'}>{'Wide spacing'}</Typography>
     </div>
 );

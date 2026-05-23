@@ -1,8 +1,8 @@
 export const usePathname = () => '/';
 
 export const useRouter = () => ({
-    push: (href: string) => { window.location.href = href; },
-    replace: (href: string) => { window.location.href = href; },
+    push: (href: string) => {window.location.href = href;},
+    replace: (href: string) => {window.location.href = href;},
     back: () => window.history.back(),
     forward: () => window.history.forward(),
     refresh: () => window.location.reload(),
