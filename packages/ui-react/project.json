@@ -1,12 +1,30 @@
 {
-  "name": "ui-react",
-  "targets": {
-    "build-css": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "pnpx @tailwindcss/cli --input ./src/index.css --output ./lib/index.css",
-        "cwd": "{projectRoot}"
-      }
+    "name": "ui-react",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "tags": ["publishable"],
+    "targets": {
+        "build-css": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "pnpx @tailwindcss/cli --input ./src/index.css --output ./lib/index.css",
+                "cwd": "{projectRoot}"
+            }
+        },
+        "build": {
+            "executor": "nx:run-commands",
+            "dependsOn": ["build-css"],
+            "options": {
+                "command": "tsc --build tsconfig.json",
+                "cwd": "{projectRoot}"
+            }
+        },
+        "nx-release-publish": {
+            "dependsOn": ["build"],
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "pnpm publish --no-git-checks",
+                "cwd": "{projectRoot}"
+            }
+        }
     }
-  }
 }

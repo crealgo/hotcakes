@@ -2,10 +2,13 @@
   "name": "@hotcakes/eslint-config",
   "version": "1.5.0",
   "type": "module",
-  "types": "./index.d.ts",
+  "types": "./lib/index.d.ts",
   "exports": {
     "./package.json": "./package.json",
-    ".": "./lib/index.js"
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    }
   },
   "dependencies": {
     "@eslint/js": "catalog:",
@@ -28,9 +31,11 @@
     "tooling",
     "monorepo"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
-    "./index.js",
-    "./index.d.ts"
+    "lib/**"
   ],
   "description": "Provides a consistent linting foundation for JavaScript projects. It defines a solid baseline of style and best practices, and is extendable for both internal and external usage."
 }
