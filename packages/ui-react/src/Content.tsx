@@ -1,7 +1,7 @@
 'use client';
 
-import { styled, css } from 'styled-components';
-import { type Breakpoint } from './utils/createBreakpoints.js';
+import {styled, css} from 'styled-components';
+import {type Breakpoint} from './utils/createBreakpoints.js';
 
 interface Props {
     spacing?: number;

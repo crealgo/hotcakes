@@ -1,16 +1,16 @@
 'use client';
 
-import { forwardRef } from 'react';
-import { ButtonLink } from './ButtonLink.js';
-import { Container } from './Container.js';
-import { Link } from './Link.js';
-import { LinkLarge } from './LinkLarge.js';
-import { Stack } from './Stack.js';
-import { Typography } from './Typography.js';
-import { styled, css } from 'styled-components';
-import { Block } from './Block.js';
-import { usePathname } from 'next/navigation.js';
-import { Divider } from './Divider.js';
+import {forwardRef} from 'react';
+import {ButtonLink} from './ButtonLink.js';
+import {Container} from './Container.js';
+import {Link} from './Link.js';
+import {LinkLarge} from './LinkLarge.js';
+import {Stack} from './Stack.js';
+import {Typography} from './Typography.js';
+import {styled, css} from 'styled-components';
+import {Block} from './Block.js';
+import {usePathname} from 'next/navigation.js';
+import {Divider} from './Divider.js';
 
 interface Props {
     isOpen?: boolean;
@@ -18,7 +18,7 @@ interface Props {
     socialLinks: Work.SocialLink[];
 }
 
-const Drawer = styled(Block)(({ theme }) => css`
+const Drawer = styled(Block)(({theme}) => css`
     background-color: ${theme.color.slate[100]};
     position: fixed;
     inset: 0;
@@ -44,7 +44,7 @@ const DrawerContainer = styled(Container)`
     }
 `;
 
-const DrawerLinkStack = styled.nav(({ theme }) => css`
+const DrawerLinkStack = styled.nav(({theme}) => css`
     display: flex;
     flex-direction: column;
     gap: 0.125rem;
@@ -67,8 +67,8 @@ export const HeaderDrawer = forwardRef<HTMLDivElement, Props>((props, ref) => {
 
     return (
         <Drawer ref={ref} data-open={props.isOpen}>
-            <DrawerContainer data-open={props.isOpen} className="py-5">
-                <Typography variant="h3">Menu</Typography>
+            <DrawerContainer data-open={props.isOpen} className={'py-5'}>
+                <Typography variant={'h3'}>{'Menu'}</Typography>
                 <DrawerLinkStack>
                     {props.mainLinks?.map((mainLink) => (
                         <LinkLarge
@@ -81,12 +81,12 @@ export const HeaderDrawer = forwardRef<HTMLDivElement, Props>((props, ref) => {
                     ))}
                 </DrawerLinkStack>
                 <Divider />
-                <Typography variant="h3">Social</Typography>
+                <Typography variant={'h3'}>{'Social'}</Typography>
                 <Stack gap={1}>
-                    <Typography variant="display2">
-                        Let me know what you’re building.
+                    <Typography variant={'display2'}>
+                        {'Let me know what you’re building.'}
                         {' '}
-                        <Link noUnderline href="mailto:manaschimpidi@gmail.com">
+                        <Link noUnderline href={'mailto:manaschimpidi@gmail.com'}>
                             {'I\'d love to help.'}
                         </Link>
                     </Typography>
@@ -105,12 +105,12 @@ export const HeaderDrawer = forwardRef<HTMLDivElement, Props>((props, ref) => {
                     </Stack>
                 </Stack>
                 <Divider />
-                <Typography variant="h3">About Me</Typography>
-                <Typography variant="body2">
-                    This site is a collective of all my Case Studies and Projects. All work has been
-                    designed, photographed, coded and written by and is property of, Manas Chimpidi
-                    (Me), unless stated otherwise. If you would like to use, download, or commission me
-                    for a project, contact me at the mentioned outlets below.
+                <Typography variant={'h3'}>{'About Me'}</Typography>
+                <Typography variant={'body2'}>
+                    {'This site is a collective of all my Case Studies and Projects. All work has been'}
+                    {'designed, photographed, coded and written by and is property of, Manas Chimpidi'}
+                    {'(Me), unless stated otherwise. If you would like to use, download, or commission me'}
+                    {'for a project, contact me at the mentioned outlets below.'}
                 </Typography>
             </DrawerContainer>
         </Drawer>

@@ -1,7 +1,7 @@
 'use client';
 
-import { ThemeProvider as StyledThemeProvider } from 'styled-components';
-import { createTheme } from './utils/createTheme.js';
+import {ThemeProvider as StyledThemeProvider} from 'styled-components';
+import {createTheme} from './utils/createTheme.js';
 
 const defaultTheme = createTheme();
 

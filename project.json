@@ -1,10 +1,30 @@
 {
   "name": "hotcakes-core",
   "$schema": "./node_modules/nx/schemas/project-schema.json",
+  "implicitDependencies": [
+    "ui-react"
+  ],
   "targets": {
     "build": {
-      "command": "tsc --build",
-      "cache": false
+      "executor": "nx:run-commands",
+      "dependsOn": [
+        "^build-css"
+      ],
+      "options": {
+        "command": "tsc --build"
+      },
+      "configurations": {
+        "force": {
+          "args": "--force"
+        }
+      }
+    },
+    "dev": {
+      "continuous": true,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc --build --watch"
+      }
     }
   }
 }

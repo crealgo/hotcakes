@@ -1,3 +1,4 @@
+import {defineConfig} from 'eslint';
 import hotcakesConfig from '@hotcakes/eslint-config';
 
-export default hotcakesConfig;
+export default defineConfig(hotcakesConfig);

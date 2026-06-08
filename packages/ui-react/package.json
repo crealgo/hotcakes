@@ -3,14 +3,20 @@
   "version": "0.0.0-semantically-released",
   "type": "module",
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
-  "scripts": {
-    "build": "tsc --noEmit false --rootDir src --outDir dist",
-    "prepack": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "description": "",
+  "description": "Reusable React component library built with styled-components and Tailwind CSS, designed for use in Next.js and standard React projects.",
+  "keywords": [
+    "hotcakes",
+    "react",
+    "component-library",
+    "ui",
+    "styled-components",
+    "tailwindcss",
+    "nextjs",
+    "typescript"
+  ],
   "exports": {
-    ".": "./lib/index.js",
+    "./package.json": "./package.json",
+    "./index.css": "./lib/index.css",
     "./*": "./lib/*.js",
     "./utils/*": "./lib/utils/*.js",
     "./hooks/*": "./lib/hooks/*.js"
@@ -24,15 +30,18 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "styled-components": "^6.1.11",
-    "tailwindcss": "^4.2.4"
+    "styled-components": "^6.4.1"
   },
   "peerDependencies": {
     "next": "^14.2.35",
     "react": "catalog:",
-    "react-dom": "catalog:"
+    "react-dom": "catalog:",
+    "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/cli": "^4.3.0",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "typescript": "catalog:",

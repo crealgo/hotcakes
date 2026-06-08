@@ -1,7 +1,7 @@
 'use client';
 
-import { Content } from './Content.js';
-import { Typography } from './Typography.js';
+import {Content} from './Content.js';
+import {Typography} from './Typography.js';
 
 type TitleBoxProps = React.PropsWithChildren<{
     title?: React.ReactNode;
@@ -11,9 +11,9 @@ type TitleBoxProps = React.PropsWithChildren<{
 
 export const TitleBox: React.FC<TitleBoxProps> = (props) => (
     <Content>
-        {props.title && <Typography variant="display1">{props.title}</Typography>}
-        {props.subtitle && <Typography variant="display2">{props.subtitle}</Typography>}
-        {props.description && <Typography variant="display3">{props.description}</Typography>}
-        {props.children && <div className="mt-10 lg:mt-12">{props.children}</div>}
+        {props.title && <Typography variant={'display1'}>{props.title}</Typography>}
+        {props.subtitle && <Typography variant={'display2'}>{props.subtitle}</Typography>}
+        {props.description && <Typography variant={'display3'}>{props.description}</Typography>}
+        {props.children && <div className={'mt-10 lg:mt-12'}>{props.children}</div>}
     </Content>
 );

@@ -1,0 +1,27 @@
+{
+    "name": "eslint-config",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "tags": ["publishable"],
+    "targets": {
+        "build": {
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": [
+                    "mkdir -p lib",
+                    "cp index.js lib/index.js",
+                    "cp index.d.ts lib/index.d.ts"
+                ],
+                "parallel": false,
+                "cwd": "{projectRoot}"
+            }
+        },
+        "nx-release-publish": {
+            "dependsOn": ["build"],
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "pnpm publish --no-git-checks",
+                "cwd": "{projectRoot}"
+            }
+        }
+    }
+}

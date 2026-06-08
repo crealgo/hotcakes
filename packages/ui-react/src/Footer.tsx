@@ -1,15 +1,15 @@
 'use client';
 
-import { styled, css } from 'styled-components';
-import { Block } from './Block.js';
-import { ButtonLink } from './ButtonLink.js';
-import { Container } from './Container.js';
-import { Content } from './Content.js';
-import { Divider } from './Divider.js';
-import { Image } from './Image.js';
-import { Mark } from './Mark.js';
-import { Stack } from './Stack.js';
-import { Typography } from './Typography.js';
+import {styled, css} from 'styled-components';
+import {Block} from './Block.js';
+import {ButtonLink} from './ButtonLink.js';
+import {Container} from './Container.js';
+import {Content} from './Content.js';
+import {Divider} from './Divider.js';
+import {Image} from './Image.js';
+import {Mark} from './Mark.js';
+import {Stack} from './Stack.js';
+import {Typography} from './Typography.js';
 
 const FooterRoot = styled.footer`
     ${Block} {
@@ -21,7 +21,7 @@ const FooterRoot = styled.footer`
     }
 `;
 
-const GridContainer = styled(Container)(({ theme }) => css`
+const GridContainer = styled(Container)(({theme}) => css`
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -40,10 +40,10 @@ export const Footer: React.FC<Props> = (props) => (
     <FooterRoot>
         <Block>
             <GridContainer>
-                <Image aspectRatio="4/3" objectFit="contain" alt="Paining UX" src="/assets/doodles/design.svg" />
+                <Image aspectRatio={'4/3'} objectFit={'contain'} alt={'Paining UX'} src={'/assets/doodles/design.svg'} />
                 <Stack vertical gap={1.5}>
-                    <Typography variant="display2">
-                        Let me know what you’re building.
+                    <Typography variant={'display2'}>
+                        {'Let me know what you’re building.'}
                         {' '}
                         <Mark>
                             {'I\'d love to help.'}
@@ -69,22 +69,23 @@ export const Footer: React.FC<Props> = (props) => (
         <Block>
             <Container>
                 <Content spacing={0.5}>
-                    <Typography variant="display3">About Me</Typography>
-                    <Typography variant="body2">
-                        This site is a collective of all my Case Studies and Projects. All work has been
-                        designed, photographed, coded and written by and is property of, Manas Chimpidi
-                        (Me), unless stated otherwise. If you would like to use, download, or commission me
-                        for a project, contact me at the mentioned outlets below.
+                    <Typography variant={'display3'}>{'About Me'}</Typography>
+                    <Typography variant={'body2'}>
+                        {'This site is a collective of all my Case Studies and Projects. All work has been'}
+                        {'designed, photographed, coded and written by and is property of, Manas Chimpidi'}
+                        {'(Me), unless stated otherwise. If you would like to use, download, or commission me'}
+                        {'for a project, contact me at the mentioned outlets below.'}
                     </Typography>
                 </Content>
             </Container>
         </Block>
-        <Block color="brand">
+        <Block color={'brand'}>
             <Container>
-                <Typography variant="caption">
+                <Typography variant={'caption'}>
                     {new Date().getFullYear()}
                     {' '}
-                    &copy; Copyright MANASC.COM
+                    &copy;
+                    {' Copyright MANASC.COM'}
                 </Typography>
             </Container>
         </Block>

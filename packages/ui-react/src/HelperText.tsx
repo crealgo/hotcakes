@@ -1,15 +1,15 @@
 'use client';
 
-import { styled, css } from 'styled-components';
-import { Icon } from './Icon.js';
-import { Typography } from './Typography.js';
+import {styled, css} from 'styled-components';
+import {Icon} from './Icon.js';
+import {Typography} from './Typography.js';
 
 type HelperTextProps = React.PropsWithChildren<{
     icon?: string;
     center?: boolean;
 }>;
 
-const HelperTextRoot = styled('div')<{ $center: boolean }>((props) => css`
+const HelperTextRoot = styled('div')<{$center: boolean}>((props) => css`
     display: flex;
     align-items: center;
     justify-content: ${props.$center ? 'center' : 'unset'};
@@ -19,8 +19,8 @@ const HelperTextRoot = styled('div')<{ $center: boolean }>((props) => css`
 `);
 
 export const HelperText: React.FC<HelperTextProps> = (props) => (
-    <HelperTextRoot className="HelperText-root" $center={Boolean(props.center)}>
+    <HelperTextRoot className={'HelperText-root'} $center={Boolean(props.center)}>
         {props.icon && <Icon icon={props.icon} />}
-        <Typography variant="caption">{props.children}</Typography>
+        <Typography variant={'caption'}>{props.children}</Typography>
     </HelperTextRoot>
 );

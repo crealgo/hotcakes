@@ -1,6 +1,6 @@
 'use client';
 
-import { ColorChip } from './ColorChip.js';
+import {ColorChip} from './ColorChip.js';
 
 export interface ColorPaletteProps {
     colors: {
@@ -20,10 +20,10 @@ export interface ColorPaletteProps {
 // `;
 
 export const ColorPalette: React.FC<ColorPaletteProps> = (props) => (
-    <div className="col-span-full lg:col-span-3">
-        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
+    <div className={'col-span-full lg:col-span-3'}>
+        <div className={'grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5'}>
             {props.colors.map((color) => (
-                <ColorChip key={color.name} color={color} />
+                <ColorChip key={color.name} {...color} />
             ))}
         </div>
     </div>

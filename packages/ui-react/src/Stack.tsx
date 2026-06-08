@@ -1,6 +1,6 @@
 'use client';
 
-import { styled, css } from 'styled-components';
+import {styled, css} from 'styled-components';
 
 type Props = React.ComponentPropsWithoutRef<'div'> & {
     vertical?: boolean;

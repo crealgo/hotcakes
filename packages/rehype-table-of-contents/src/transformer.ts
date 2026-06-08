@@ -1,8 +1,8 @@
-import { kebabCase } from 'change-case';
+import {kebabCase} from 'change-case';
 import type * as hast from 'hast';
-import { AnchorElement, ArrayExpression, ObjectExpression } from './utils/builders.js';
-import { getFrontMatter } from './utils/getFrontMatter.js';
-import { getHeadings } from './utils/getHeadings.js';
+import {AnchorElement, ArrayExpression, ObjectExpression} from './utils/builders.js';
+import {getFrontMatter} from './utils/getFrontMatter.js';
+import {getHeadings} from './utils/getHeadings.js';
 
 const transformer = (ast: hast.Root): void => {
     const frontmatter = getFrontMatter(ast);
@@ -36,6 +36,7 @@ const transformer = (ast: hast.Root): void => {
         method: false,
         shorthand: false,
         computed: false,
+        // @ts-expect-error need to fix this type
         value: tableOfContents
     });
 };

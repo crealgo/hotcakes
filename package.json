@@ -7,14 +7,10 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@nx/js": "22.6.5",
-    "@swc-node/register": "~1.11.1",
-    "@swc/core": "~1.15.33",
-    "@swc/helpers": "~0.5.21",
-    "commitizen": "^4.3.1",
-    "eslint": "^9.39.4",
-    "nx": "~22.7.1",
-    "release": "^6.3.1",
+    "@hotcakes/eslint-config": "workspace:^",
+    "eslint": "catalog:",
+    "nx": "~22.7.5",
     "typescript": "catalog:"
-  }
+  },
+  "packageManager": "pnpm@11.5.2+sha512.71c631e382066efc25625d5cf029075de07b61b37f6e27350fbd84b1bda5864c8c1967adc280776b45c30a715c0359a3be08fef42d5bb09e2b99029979692916"
 }

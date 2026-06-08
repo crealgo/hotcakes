@@ -1,7 +1,7 @@
 'use client';
 
-import { FontIcon } from './FontIcon.js';
-import { SvgIcon } from './SvgIcon.js';
+import {FontIcon} from './FontIcon.js';
+import {SvgIcon} from './SvgIcon.js';
 
 interface IconProps {
     icon: string | React.ComponentType;

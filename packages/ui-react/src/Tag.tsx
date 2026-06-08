@@ -1,10 +1,10 @@
 'use client';
 
-import { styled, css } from 'styled-components';
-import { Icon } from './Icon.js';
-import { Typography } from './Typography.js';
-import { createRipple } from './utils/createRipple.js';
-import { generateControlColors } from './utils/generateControlColors.js';
+import {styled, css} from 'styled-components';
+import {Icon} from './Icon.js';
+import {Typography} from './Typography.js';
+import {createRipple} from './utils/createRipple.js';
+import {generateControlColors} from './utils/generateControlColors.js';
 
 type Props = ControlProps<HTMLDivElement> & React.ComponentPropsWithoutRef<'div'> & {
     isClickable?: boolean;
@@ -37,6 +37,6 @@ export const Tag: React.FC<Props> = (props) => (
         }}
     >
         {props.icon && <Icon icon={props.icon} />}
-        <Typography variant="caption">{props.children}</Typography>
+        <Typography variant={'caption'}>{props.children}</Typography>
     </TagRoot>
 );

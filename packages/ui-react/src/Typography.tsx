@@ -1,11 +1,10 @@
 'use client';
 
-import { css, styled } from 'styled-components';
+import {css, styled} from 'styled-components';
 
 type KnownTarget = 'span' | 'div' | 'p' | 'small' | 'h1' | 'h2' | 'h3';
 
 const withHeaderCSS = (strings: TemplateStringsArray) => css`
-    font-family: Lora, serif;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.25;
@@ -13,7 +12,6 @@ const withHeaderCSS = (strings: TemplateStringsArray) => css`
 `;
 
 const withBodyCSS = (strings: TemplateStringsArray) => css`
-    font-family: 'Lora', serif;
     line-height: 1.625;
     ${strings}
 `;
@@ -74,7 +72,7 @@ interface Props {
 
 export type TypographyProps = Props & React.HTMLAttributes<HTMLElement>;
 
-const TypographyRoot = styled.p<{ $variant: TypeVariant }>((props) => styleMap[props.$variant]);
+const TypographyRoot = styled.p<{$variant: TypeVariant}>((props) => styleMap[props.$variant]);
 
 export const Typography: React.FC<TypographyProps> = (props) => {
     const resolvedElement = props.as ?? tagMap[props.variant ?? 'body1'];

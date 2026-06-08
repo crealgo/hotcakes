@@ -1,4 +1,4 @@
-import type { Root } from 'hast';
+import type {Root} from 'hast';
 
 export const getHeadings = (ast: Root) => ast.children
     .filter((node) => node.type === 'element')

@@ -1,13 +1,13 @@
 'use client';
 
-import { styled } from 'styled-components';
+import {styled} from 'styled-components';
 
 interface BlockProps {
     divider?: boolean;
     color?: ControlColor;
 }
 
-export const Block = styled.div<BlockProps>(({ theme, color }) => `
+export const Block = styled.div<BlockProps>(({theme, color}) => `
     padding-inline: ${theme.spacing(1)};
     background-color: ${color ? theme.color[color][50] : 'transparent'};
 

@@ -1,6 +1,6 @@
 'use client';
-import { useId } from 'react';
-import { styled, css } from 'styled-components';
+import {useId} from 'react';
+import {styled, css} from 'styled-components';
 
 type FontGlyphBoxProps = {
     defaultValue?: string;
@@ -8,7 +8,7 @@ type FontGlyphBoxProps = {
     name: string;
 } & Pick<React.ComponentPropsWithoutRef<'input'>, 'onChange' | 'aria-selected'>;
 
-const StyledLabel = styled.label(({ theme }) => css`
+const StyledLabel = styled.label(({theme}) => css`
     position: relative;
     aspect-ratio: 1 / 1;
     width: calc(100% / 9 + 1px);
@@ -58,7 +58,7 @@ export const FontGlyphBox: React.FC<FontGlyphBoxProps> = (props) => {
     return (
         <StyledLabel htmlFor={id}>
             <input
-                type="radio"
+                type={'radio'}
                 defaultChecked={props.defaultValue === props.children}
                 name={props.name}
                 id={id}

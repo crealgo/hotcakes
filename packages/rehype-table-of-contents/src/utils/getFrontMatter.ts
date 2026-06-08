@@ -1,4 +1,4 @@
-import type { Root } from 'hast';
+import type {Root} from 'hast';
 import 'mdast-util-mdxjs-esm';
 
 export const getFrontMatter = (ast: Root) => {

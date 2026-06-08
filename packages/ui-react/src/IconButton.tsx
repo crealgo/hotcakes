@@ -1,15 +1,15 @@
 'use client';
 
-import { forwardRef } from 'react';
-import { styled, css } from 'styled-components';
-import { ButtonBase } from './ButtonBase.js';
-import { Icon } from './Icon.js';
+import {forwardRef} from 'react';
+import {styled, css} from 'styled-components';
+import {ButtonBase} from './ButtonBase.js';
+import {Icon} from './Icon.js';
 
 interface Props {
     contrast?: boolean;
 }
 
-const IconButtonRoot = styled(ButtonBase)<{ $contrast?: boolean }>((props) => css`
+const IconButtonRoot = styled(ButtonBase)<{$contrast?: boolean}>((props) => css`
     --background-color: rgba(0,0,0,0.125);
     --color: ${props.theme.color.slate[800]};
 
@@ -37,7 +37,7 @@ const IconButtonRoot = styled(ButtonBase)<{ $contrast?: boolean }>((props) => cs
     }
 `);
 
-export const IconButton = forwardRef<HTMLButtonElement, ControlProps & Props>(({ icon, contrast, ...props }, ref) => (
+export const IconButton = forwardRef<HTMLButtonElement, ControlProps & Props>(({icon, contrast, ...props}, ref) => (
     <IconButtonRoot {...props} ref={ref} $contrast={contrast}>
         {icon && <Icon icon={icon} />}
     </IconButtonRoot>

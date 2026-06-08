@@ -1,17 +1,17 @@
 'use client';
 
-import { usePathname } from 'next/navigation.js';
-import { useEffect, useRef, useState } from 'react';
-import { styled, css } from 'styled-components';
-import { Block } from './Block.js';
-import { ButtonLink } from './ButtonLink.js';
-import { Container } from './Container.js';
-import { HeaderDrawer } from './HeaderDrawer.js';
-import { HeaderSearch } from './HeaderSearch.js';
-import { IconButton } from './IconButton.js';
-import { Image } from './Image.js';
-import { KeyboardSnippet } from './KeyboardSnippet.js';
-import { Link } from './Link.js';
+import {usePathname} from 'next/navigation.js';
+import {useEffect, useRef, useState} from 'react';
+import {styled, css} from 'styled-components';
+import {Block} from './Block.js';
+import {ButtonLink} from './ButtonLink.js';
+import {Container} from './Container.js';
+import {HeaderDrawer} from './HeaderDrawer.js';
+import {HeaderSearch} from './HeaderSearch.js';
+import {IconButton} from './IconButton.js';
+import {Image} from './Image.js';
+import {KeyboardSnippet} from './KeyboardSnippet.js';
+import {Link} from './Link.js';
 
 const HeaderBar = styled(Block)`
     background: white;
@@ -42,7 +42,7 @@ const HeaderItem = styled.div`
     height: 100%;
 `;
 
-const HeaderNav = styled(HeaderItem)(({ theme }) => css`
+const HeaderNav = styled(HeaderItem)(({theme}) => css`
     ${theme.breakpoint.down('md')} {
         display: none;
     }
@@ -126,22 +126,22 @@ export const Header: React.FC<Props> = (props) => {
     }, [isSearchOpen, isMenuOpen]);
 
     return (
-        <HeaderBar ref={headerRef} as="header" color="slate">
+        <HeaderBar ref={headerRef} as={'header'} color={'slate'}>
             <HeaderContainer>
                 <HeaderItem data-logo data-top>
-                    <Link href="/">
+                    <Link href={'/'}>
                         <Image
                             hideLoader
-                            height="1.25rem"
-                            aspectRatio="4/1"
-                            objectFit="contain"
-                            loadingTransition="fade"
-                            alt="Manas Logo"
+                            height={'1.25rem'}
+                            aspectRatio={'4/1'}
+                            objectFit={'contain'}
+                            loadingTransition={'fade'}
+                            alt={'Manas Logo'}
                             src={isSearchOpen ? '/assets/logotype-contrast.svg' : '/assets/logotype.svg'}
                         />
                     </Link>
                 </HeaderItem>
-                <HeaderNav data-bottom as="nav">
+                <HeaderNav data-bottom as={'nav'}>
                     {props.mainLinks.map((mainLink) => (
                         <ButtonLink
                             key={mainLink.slug}
@@ -156,7 +156,7 @@ export const Header: React.FC<Props> = (props) => {
                     <HeaderItem>
                         <KeyboardSnippet accent keys={['Ctrl', '/']} />
                         <IconButton
-                            variant="text"
+                            variant={'text'}
                             icon={isSearchOpen ? 'close' : 'search'}
                             contrast={isSearchOpen}
                             onClick={() => {
@@ -166,7 +166,7 @@ export const Header: React.FC<Props> = (props) => {
                     </HeaderItem>
                     <HeaderItem>
                         <IconButton
-                            variant="text"
+                            variant={'text'}
                             icon={isMenuOpen ? 'close' : 'menu'}
                             contrast={isSearchOpen}
                             onClick={() => {
