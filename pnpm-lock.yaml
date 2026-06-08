@@ -42,7 +42,7 @@ importers:
         specifier: workspace:^
         version: link:packages/eslint-config
       eslint:
-        specifier: ^10.4.1
+        specifier: 'catalog:'
         version: 10.4.1(jiti@2.7.0)
       nx:
         specifier: ~22.7.5

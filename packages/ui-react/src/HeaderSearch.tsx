@@ -1,32 +1,34 @@
 'use client';
 
-import { useRouter } from 'next/navigation.js';
-import { useEffect, useRef } from 'react';
-import { styled, css } from 'styled-components';
-import { Block } from './Block.js';
-import { Container } from './Container.js';
-import { IconButton } from './IconButton.js';
+import {useRouter} from 'next/navigation.js';
+import {useEffect, useRef} from 'react';
+import {styled, css} from 'styled-components';
+import {Block} from './Block.js';
+import {Container} from './Container.js';
+import {IconButton} from './IconButton.js';
 
 interface Props {
     onClose: () => void;
     isOpen?: boolean;
 }
 
-const SearchBoxRoot = styled(Block)((props) => css`
-    ${Block.inlineStyle}
-    background-color: ${props.theme.color.brand.primary};
-    inset: 0 0 auto 0;
-    position: fixed;
-    padding-block: 3.5rem 2rem;
-    overflow: hidden;
+const SearchBoxRoot = styled(Block)(
+    (props) => css`
+        ${Block.inlineStyle}
+        background-color: ${props.theme.color.brand.primary};
+        inset: 0 0 auto 0;
+        position: fixed;
+        padding-block: 3.5rem 2rem;
+        overflow: hidden;
 
-    transition: transform 300ms;
-    transform: translateY(-100%);
+        transition: transform 300ms;
+        transform: translateY(-100%);
 
-    &[data-open=true] {
-        transform: translateY(0);
-    }
-`);
+        &[data-open="true"] {
+            transform: translateY(0);
+        }
+    `
+);
 
 const SearchContainer = styled(Container)`
     position: relative;
@@ -36,44 +38,46 @@ const SearchContainer = styled(Container)`
     transition-duration: 300ms;
     transform: translateY(calc(100% + 3rem));
 
-    &[data-open=true] {
+    &[data-open="true"] {
         transform: translateY(0);
     }
 `;
 
-const SearchInput = styled.input((props) => css`
-    background: unset;
-    border: unset;
-    position: relative;
-    border-color: ${props.theme.color.brand[900]};
-    border-bottom: solid 2px ${props.theme.color.white};
-    width: 100%;
-    height: auto;
-    padding-right: 2.25rem;
+const SearchInput = styled.input(
+    (props) => css`
+        background: unset;
+        border: unset;
+        position: relative;
+        border-color: ${props.theme.color.brand[900]};
+        border-bottom: solid 2px ${props.theme.color.white};
+        width: 100%;
+        height: auto;
+        padding-right: 2.25rem;
 
-    font-style: italic;
-    font-size: 1.75rem;
-    color: ${props.theme.color.white};
-
-    &::-webkit-search-decoration,
-    &::-webkit-search-cancel-button,
-    &::-webkit-search-results-button,
-    &::-webkit-search-results-decoration {
-        display: none;
-    }
-
-    &:focus-visible {
-        outline: none;
-        border-color: ${props.theme.color.white};
-        outline-offset: 5px;
-        border-radius: 0px;
-    }
-
-    &::placeholder {
-        opacity: 0.4;
+        font-style: italic;
+        font-size: 1.75rem;
         color: ${props.theme.color.white};
-    }
-`);
+
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        &:focus-visible {
+            outline: none;
+            border-color: ${props.theme.color.white};
+            outline-offset: 5px;
+            border-radius: 0px;
+        }
+
+        &::placeholder {
+            opacity: 0.4;
+            color: ${props.theme.color.white};
+        }
+    `
+);
 
 const SearchClearButton = styled(IconButton)/* css */`
     position: absolute;
@@ -81,7 +85,7 @@ const SearchClearButton = styled(IconButton)/* css */`
     right: 0;
 `;
 
-export const HeaderSearch: React.FC<Props> = ({ isOpen = false, onClose }) => {
+export const HeaderSearch: React.FC<Props> = ({isOpen = false, onClose}) => {
     const router = useRouter();
 
     const refs = {
@@ -101,7 +105,9 @@ export const HeaderSearch: React.FC<Props> = ({ isOpen = false, onClose }) => {
         }
     };
 
-    const handleKeyDown: React.KeyboardEventHandler<HTMLInputElement> = (event) => {
+    const handleKeyDown: React.KeyboardEventHandler<HTMLInputElement> = (
+        event
+    ) => {
         if (
             event.key === 'Enter'
             && event.currentTarget
