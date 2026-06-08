@@ -1,6 +1,16 @@
 {
   "name": "@hotcakes/ui-react-docs",
   "type": "module",
+  "description": "Storybook documentation site for the @hotcakes/ui-react component library.",
+  "keywords": [
+    "hotcakes",
+    "storybook",
+    "docs",
+    "react",
+    "component-library",
+    "ui",
+    "tailwindcss"
+  ],
   "devDependencies": {
     "@hotcakes/ui-react": "workspace:^",
     "@storybook/addon-vitest": "10.3.6",

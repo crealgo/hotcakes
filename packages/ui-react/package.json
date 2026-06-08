@@ -3,7 +3,17 @@
   "version": "0.0.0-semantically-released",
   "type": "module",
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
-  "description": "",
+  "description": "Reusable React component library built with styled-components and Tailwind CSS, designed for use in Next.js and standard React projects.",
+  "keywords": [
+    "hotcakes",
+    "react",
+    "component-library",
+    "ui",
+    "styled-components",
+    "tailwindcss",
+    "nextjs",
+    "typescript"
+  ],
   "exports": {
     "./package.json": "./package.json",
     "./index.css": "./lib/index.css",
