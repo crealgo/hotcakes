@@ -1,11 +1,11 @@
 'use client';
 
-import {useRouter} from 'next/navigation.js';
-import {useEffect, useRef} from 'react';
-import {styled, css} from 'styled-components';
-import {Block} from './Block.js';
-import {Container} from './Container.js';
-import {IconButton} from './IconButton.js';
+import { useRouter } from 'next/navigation.js';
+import { useEffect, useRef } from 'react';
+import { styled, css } from 'styled-components';
+import { Block } from './Block.js';
+import { Container } from './Container.js';
+import { IconButton } from './IconButton.js';
 
 interface Props {
     onClose: () => void;
@@ -51,7 +51,6 @@ const SearchInput = styled.input((props) => css`
     height: auto;
     padding-right: 2.25rem;
 
-    font-family: Lora, serif;
     font-style: italic;
     font-size: 1.75rem;
     color: ${props.theme.color.white};
@@ -82,7 +81,7 @@ const SearchClearButton = styled(IconButton)/* css */`
     right: 0;
 `;
 
-export const HeaderSearch: React.FC<Props> = ({isOpen = false, onClose}) => {
+export const HeaderSearch: React.FC<Props> = ({ isOpen = false, onClose }) => {
     const router = useRouter();
 
     const refs = {

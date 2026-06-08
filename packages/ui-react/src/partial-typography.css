@@ -1,0 +1,20 @@
+ .display-1 {
+   @apply font-medium;
+   @apply text-4xl tracking-tight leading-snug;
+
+   @media screen and (min-width: theme("screens.md")) {
+     @apply text-6xl leading-tight;
+   }
+
+   @media screen and (min-width: theme("screens.lg")) {
+     @apply text-7xl;
+   }
+ }
+
+ .link {
+   @apply text-brand;
+
+   &:hover {
+     @apply text-brand;
+   }
+ }

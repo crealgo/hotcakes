@@ -5,7 +5,7 @@
     "dev": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "storybook dev",
+        "command": "storybook dev --port 3000",
         "cwd": "{projectRoot}"
       }
     }

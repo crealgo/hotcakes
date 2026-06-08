@@ -35,7 +35,6 @@ const KeyboardSnippetRoot = styled.span<{$accent: boolean}>((props) => css`
         padding: 0.125rem 0.25rem;
 
         color: var(--kbd-color);
-        font-family: "Noto Sans Mono", monospace;
         white-space: nowrap;
         font-size: 0.675rem;
         letter-spacing: -0.05rem;

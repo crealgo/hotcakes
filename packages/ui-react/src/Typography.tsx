@@ -5,7 +5,6 @@ import {css, styled} from 'styled-components';
 type KnownTarget = 'span' | 'div' | 'p' | 'small' | 'h1' | 'h2' | 'h3';
 
 const withHeaderCSS = (strings: TemplateStringsArray) => css`
-    font-family: Lora, serif;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.25;
@@ -13,7 +12,6 @@ const withHeaderCSS = (strings: TemplateStringsArray) => css`
 `;
 
 const withBodyCSS = (strings: TemplateStringsArray) => css`
-    font-family: 'Lora', serif;
     line-height: 1.625;
     ${strings}
 `;

@@ -1,1 +1,159 @@
+@layer theme, base, components, utilities;
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@import "./partial-typography.css";
+
+:root {
+  --hc-color-brand-lighter: hsl(240, 100%, 95%);
+  --hc-color-brand-light: hsl(240, 100%, 90%);
+  --hc-color-brand: #0000ff;
+  --hc-color-brand-dark: #000099;
+
+  --hc-color-accent: hsl(23, 95%, 85%);
+  --hc-color-accent-dark: hsl(23, 95%, 75%);
+  --hc-color-accent-darker: hsl(23, 95%, 60%);
+}
+
+@theme {
+  --color-brand-lighter: var(--hc-color-brand-lighter);
+  --color-brand-light: var(--hc-color-brand-light);
+  --color-brand: var(--hc-color-brand);
+  --color-brand-dark: var(--hc-color-brand-dark);
+
+  --color-accent: var(--hc-color-accent);
+  --color-accent-dark: var(--hc-color-accent-dark);
+  --color-accent-darker: var(--hc-color-accent-darker);
+
+  --color-gray-50: var(--color-slate-50);
+  --color-gray-100: var(--color-slate-100);
+  --color-gray-200: var(--color-slate-200);
+  --color-gray-300: var(--color-slate-300);
+  --color-gray-400: var(--color-slate-400);
+  --color-gray-500: var(--color-slate-500);
+  --color-gray-600: var(--color-slate-600);
+  --color-gray-700: var(--color-slate-700);
+  --color-gray-800: var(--color-slate-800);
+  --color-gray-900: var(--color-slate-900);
+  --color-gray-950: var(--color-slate-950);
+
+  --aspect-photo-portrait: 4/5;
+  --aspect-photo-landscape: 5/4;
+
+  /* --font-sans: "IBM Plex Sans", sans-serif; */
+  --font-sans: "Arimo Variable", sans-serif;
+  --font-display: "Arimo Variable", sans-serif;
+  --font-mono: "JetBrains Mono Variable";
+  --font-wacky: "Doto", sans-serif;
+
+  --breakpoint-xs: 300px;
+}
+
+@layer components {
+  html,
+  body {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    font-optical-sizing: none;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  /* NOTE: REMOVES WEB COMPONENT FLICKER */
+  :not(:defined) {
+    visibility: hidden;
+  }
+
+  code,
+  pre {
+    font-family: var(--font-mono);
+    font-style: normal;
+    font-weight: 400;
+    font-optical-sizing: auto;
+  }
+
+  /* selector for all tabbable elements */
+  :focus-visible,
+  ::part(hot-link):focus-visible {
+    outline: solid 2px transparent;
+    outline-offset: 2px;
+    @apply outline-blue-500;
+  }
+
+  ::part(hot-link) {
+    all: unset;
+    font-weight: semibold;
+    @apply text-blue-500;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  *::part(hot-link):hover {
+    @apply text-blue-700;
+  }
+
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl;
+  }
+
+  a,
+  button {
+    &:focus {
+      @apply rounded-md;
+    }
+
+    &:focus-visible {
+      @apply rounded-md;
+      @apply ring-2 ring-offset-4 ring-brand;
+    }
+  }
+
+  .button {
+    @apply rounded-md;
+    @apply inline-flex items-center justify-center;
+    @apply size-8 bg-gray-100;
+
+    &:hover {
+      @apply bg-gray-300;
+    }
+  }
+
+  hr {
+    @apply border-gray-300;
+    @apply border-dashed;
+  }
+}
+
+mark {
+  background-color: var(--hc-color-accent);
+}
+
+/* material font */
+.material-symbols-outlined {
+  font-size: inherit;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+/* lazy loadings */
+img[data-src] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  /* filter: brightness(0.9); */
+  opacity: 0;
+  /* transform: scale(1.05); */
+
+  &.loaded {
+    opacity: 1;
+    /* filter: brightness(1); */
+    /* transform: scale(1); */
+  }
+}
