@@ -1,3 +1,15 @@
+## 1.8.0 (2026-06-08)
+
+### 🚀 Features
+
+- setup storybook and simplify typescript plugin ([#3](https://github.com/crealgo/hotcakes-core/pull/3))
+- add multiple packages and setup nx ([#2](https://github.com/crealgo/hotcakes-core/pull/2))
+
+### ❤️ Thank You
+
+- Claude Sonnet 4.6
+- Manas Chimpidi @manasc
+
 ## 1.5.0 (2025-05-21)
 
 
