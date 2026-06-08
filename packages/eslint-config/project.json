@@ -6,12 +6,7 @@
         "build": {
             "executor": "nx:run-commands",
             "options": {
-                "commands": [
-                    "mkdir -p lib",
-                    "cp index.js lib/index.js",
-                    "cp index.d.ts lib/index.d.ts"
-                ],
-                "parallel": false,
+                "command": "tsc --build tsconfig.json",
                 "cwd": "{projectRoot}"
             }
         },
