@@ -6,14 +6,16 @@
         "projects": ["tag:publishable"],
         "version": {
             "conventionalCommits": true,
-            "preserveLocalDependencyProtocols": false
+            "preserveLocalDependencyProtocols": false,
+            "fallbackCurrentVersionResolver": "disk"
         },
         "git": {
             "commit": true,
             "tag": true
         },
         "changelog": {
-            "projectChangelogs": true
+            "projectChangelogs": true,
+            "automaticFromRef": true
         },
         "projectsRelationship": "independent"
     },

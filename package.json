@@ -8,6 +8,7 @@
   "license": "MIT",
   "devDependencies": {
     "@hotcakes/eslint-config": "workspace:^",
+    "@nx/js": "^22.7.5",
     "eslint": "catalog:",
     "nx": "~22.7.5",
     "typescript": "catalog:"
