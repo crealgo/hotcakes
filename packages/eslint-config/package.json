@@ -5,10 +5,7 @@
   "types": "./index.d.ts",
   "exports": {
     "./package.json": "./package.json",
-    ".": {
-      "types": "./index.d.ts",
-      "default": "./index.js"
-    }
+    ".": "./lib/index.js"
   },
   "dependencies": {
     "@eslint/js": "catalog:",

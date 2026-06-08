@@ -36,6 +36,7 @@ const transformer = (ast: hast.Root): void => {
         method: false,
         shorthand: false,
         computed: false,
+        // @ts-expect-error need to fix this type
         value: tableOfContents
     });
 };

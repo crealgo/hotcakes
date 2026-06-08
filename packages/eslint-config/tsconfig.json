@@ -1,15 +1,6 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "composite": true,
-    "rootDir": ".",
-    "allowJs": true,
-    "checkJs": true,
-    "noEmit": true
-  },
-  "exclude": [
-    "node_modules",
-    "dist",
-    "lib"
-  ]
+    "composite": true
+  }
 }

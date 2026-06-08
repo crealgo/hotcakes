@@ -8,6 +8,8 @@
     "esModuleInterop": true,
     "incremental": true,
     "isolatedModules": true,
+    "rootDir": "${configDir}/src",
+    "outDir": "${configDir}/lib",
     "lib": [
       "esnext",
       "dom",
@@ -24,5 +26,13 @@
     "noUnusedLocals": true,
     "noImplicitAny": true,
     "noUnusedParameters": true
-  }
+  },
+  "include": [
+    "${configDir}/src"
+  ],
+  "exclude": [
+    "${configDir}/node_modules",
+    "${configDir}/dist",
+    "${configDir}/lib"
+  ]
 }
