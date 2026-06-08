@@ -1,6 +1,6 @@
 {
   "name": "@hotcakes/ui-react",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "type": "module",
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "description": "Reusable React component library built with styled-components and Tailwind CSS, designed for use in Next.js and standard React projects.",
