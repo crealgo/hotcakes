@@ -1,3 +1,7 @@
+## 2.0.1 (2026-06-08)
+
+This was a version bump only for rehype-table-of-contents to align it with other projects, there were no code changes.
+
 # 2.0.0 (2026-06-08)
 
 This was a version bump only for rehype-table-of-contents to align it with other projects, there were no code changes.
