@@ -18,7 +18,7 @@
       ],
       "executor": "nx:run-commands",
       "options": {
-        "command": "node {workspaceRoot}/scripts/publish.mjs",
+        "command": "pnpm publish --no-git-checks",
         "cwd": "{projectRoot}"
       }
     }
