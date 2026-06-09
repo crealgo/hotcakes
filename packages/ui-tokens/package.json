@@ -2,6 +2,17 @@
   "name": "@hotcakes/ui-tokens",
   "type": "module",
   "version": "1.1.0",
+  "description": "Design tokens for the Hotcakes UI system, generated with Style Dictionary from Material color utilities and Tailwind CSS.",
+  "keywords": [
+    "hotcakes",
+    "design-tokens",
+    "style-dictionary",
+    "tailwindcss",
+    "material-design",
+    "css-variables",
+    "ui",
+    "theming"
+  ],
   "repository": "https://github.com/crealgo/hotcakes-tokens.git",
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "publishConfig": {
@@ -15,10 +26,9 @@
     "lib"
   ],
   "devDependencies": {
-    "@material/material-color-utilities": "^0.2.7",
+    "@material/material-color-utilities": "^0.4.0",
     "@types/node": "catalog:",
-    "eslint": "^8.46.0",
-    "style-dictionary": "^3.7.2",
-    "tailwindcss": "^3.3.2"
+    "style-dictionary": "^5.4.4",
+    "tailwindcss": "^4.3.0"
   }
 }
