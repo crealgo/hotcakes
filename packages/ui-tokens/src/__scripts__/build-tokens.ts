@@ -1,101 +1,79 @@
-import {existsSync, rmSync} from 'node:fs/promises';
-import {glob} from 'glob';
-import process from 'process';
-import * as StyleDictionary from 'style-dictionary';
-import {scaleColor} from '../src/utils/color';
-import {formatTokens} from '../src/utils/format-tokens';
+import {existsSync, rmSync} from 'node:fs';
+import StyleDictionary from 'style-dictionary';
+import {scaleColor} from '../__utils__/color.js';
+import {formatTokens} from '../__utils__/format-tokens.js';
+import base from '../tokens/base.js';
+import block from '../tokens/block.js';
+import components from '../tokens/components.js';
+import foundations from '../tokens/foundations.js';
+import utils from '../tokens/utils.js';
 
-const tokenDir = `${process.cwd()}/src/tokens/`;
 const distDir = `${process.cwd()}/lib/`;
 
 const buildTokens = async () => {
-	const filePaths = await glob(`${tokenDir}/**/*.ts`, {
-		nodir: true,
-		ignore: [`${tokenDir}/**/*.d.ts`],
-		noext: true,
-	});
+    const rawTokens: RawTokenObject = {
+        ...base,
+        ...block,
+        ...components,
+        ...foundations,
+        ...utils,
+    };
 
-	let rawTokens: RawTokenObject = {};
+    const tokens = formatTokens(rawTokens);
 
-	for await (const filePath of filePaths) {
-		const newTokens = (await import(filePath)).default as RawTokenObject;
-		rawTokens = {...rawTokens, ...newTokens};
-	}
+    if (existsSync(distDir)) {
+        rmSync(distDir, {recursive: true});
+    }
 
-	const tokens = formatTokens(rawTokens);
+    const sd = new StyleDictionary({
+        tokens,
+        hooks: {
+            transforms: {
+                'color/scale': {
+                    type: 'value',
+                    transitive: true,
+                    filter: token => {
+                        const tester = /main|darkest|darker|dark|neutral|light|lighter|lightest|contrast/;
+                        return tester.test(token.name);
+                    },
+                    transform: token => scaleColor(String(token.value), token.name as ColorShade),
+                },
+            },
+        },
+        platforms: {
+            css: {
+                buildPath: 'lib/',
+                transforms: [
+                    'color/scale',
+                    'attribute/cti',
+                    'name/cti/kebab',
+                    'time/seconds',
+                    'content/icon',
+                    'size/rem',
+                    'color/css',
+                ],
+                files: [
+                    {destination: 'tokens.css', format: 'css/variables'},
+                    {destination: 'tokens.scss', format: 'scss/variables'},
+                ],
+            },
+            js: {
+                buildPath: 'lib/',
+                transforms: [
+                    'color/scale',
+                    'attribute/cti',
+                    'name/cti/pascal',
+                    'size/rem',
+                    'color/hex',
+                ],
+                files: [
+                    {destination: 'tokens.json', format: 'json/nested'},
+                ],
+            },
+        },
+    });
 
-	if (existsSync(distDir)) {
-		rmSync(distDir, {recursive: true});
-	}
-
-	// StyleDictionary.registerParser({
-	// 	pattern: /\.ts/g,
-	// 	parse: ({contents}) => {
-	// 		// const tokens = (eval(contents) as RawTokenObject).default;
-	// 		console.log(contents);
-	// 		return JSON.parse(contents)
-	// 	},
-	// });
-
-	StyleDictionary.registerTransform({
-		name: 'color/scale',
-		type: 'value',
-		transitive: true,
-		matcher(token) {
-			const tester = /main|darkest|darker|dark|neutral|light|lighter|lightest|contrast/g;
-			return tester.test(token.name);
-		},
-		transformer: token => {
-			// console.log(token)
-			return scaleColor(token.value as string, token.name as ColorShade);
-		}
-	});
-
-	const client = StyleDictionary.extend({
-		tokens,
-		platforms: {
-			css: {
-				buildPath: 'lib/',
-				transforms: [
-					'color/scale',
-					'attribute/cti',
-					'name/cti/kebab',
-					'time/seconds',
-					'content/icon',
-					'size/rem',
-					'color/css',
-				],
-				files: [
-					{
-						destination: 'tokens.css',
-						format: 'css/variables',
-					},
-					{
-						destination: 'tokens.scss',
-						format: 'scss/variables',
-					},
-				],
-			},
-			js: {
-				transforms: [
-					'color/scale',
-					'attribute/cti',
-					'name/cti/pascal',
-					'size/rem',
-					'color/hex',
-				],
-				buildPath: 'lib/',
-				files: [
-					{
-						destination: 'tokens.json',
-						format: 'json/nested',
-					},
-				],
-			},
-		},
-	});
-
-	client.buildAllPlatforms();
+    await sd.buildAllPlatforms();
 };
 
 void buildTokens();

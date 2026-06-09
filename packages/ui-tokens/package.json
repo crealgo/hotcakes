@@ -19,16 +19,14 @@
     "access": "public"
   },
   "scripts": {
-    "start": "tsx watch ./scripts/build-tokens",
-    "build": "tsx ./scripts/build-tokens"
+    "start": "node --watch ./src/__scripts__/build-tokens.js",
+    "build": "node ./src/__scripts__/build-tokens.js"
   },
   "files": [
     "lib"
   ],
   "devDependencies": {
-    "@material/material-color-utilities": "^0.4.0",
-    "@types/node": "catalog:",
-    "style-dictionary": "^5.4.4",
-    "tailwindcss": "^4.3.0"
+    "@material/material-color-utilities": "^0.2.7",
+    "style-dictionary": "^5.4.4"
   }
 }

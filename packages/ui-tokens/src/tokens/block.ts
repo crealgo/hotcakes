@@ -22,7 +22,7 @@ const createAvatarCss = ({
 	bottom: `${(bottom / 628.73) * 100}%`,
 });
 
-module.exports = {
+export default {
 	block: {
 		testimonials: {
 			container: {

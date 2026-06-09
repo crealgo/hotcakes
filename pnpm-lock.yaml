@@ -9,9 +9,6 @@ catalogs:
     '@eslint/js':
       specifier: 10.x
       version: 10.0.1
-    '@types/node':
-      specifier: 25.x
-      version: 25.9.2
     '@types/react':
       specifier: 19.x
       version: 19.2.17
@@ -240,17 +237,11 @@ importers:
   packages/ui-tokens:
     devDependencies:
       '@material/material-color-utilities':
-        specifier: ^0.4.0
-        version: 0.4.0
-      '@types/node':
-        specifier: 'catalog:'
-        version: 25.9.2
+        specifier: ^0.2.7
+        version: 0.2.7
       style-dictionary:
         specifier: ^5.4.4
         version: 5.4.4(tslib@2.8.1)
-      tailwindcss:
-        specifier: ^4.3.0
-        version: 4.3.0
 
 packages:
 
@@ -1752,8 +1743,8 @@ packages:
     peerDependencies:
       tslib: '2'
 
-  '@material/material-color-utilities@0.4.0':
-    resolution: {integrity: sha512-dlq6VExJReb8dhjj3a/yTigr3ncNwoFmL5Iy2ENtbDX03EmNeOEdZ+vsaGrj7RTuO+mB7L58II4LCsl4NpM8uw==}
+  '@material/material-color-utilities@0.2.7':
+    resolution: {integrity: sha512-0FCeqG6WvK4/Cc06F/xXMd/pv4FeisI0c1tUpBbfhA2n9Y8eZEv4Karjbmf2ZqQCPUWMrGp8A571tCjizxoTiQ==}
 
   '@napi-rs/wasm-runtime@0.2.4':
     resolution: {integrity: sha512-9zESzOO5aDByvhIAsOy9TbpZ0Ur2AJbUI7UT73kcUTS2mxAMHOBaa1st/jAymNoCtvrit99kkzT1FZuXVcgfIQ==}
@@ -6169,7 +6160,7 @@ snapshots:
       '@jsonjoy.com/codegen': 17.67.0(tslib@2.8.1)
       tslib: 2.8.1
 
-  '@material/material-color-utilities@0.4.0': {}
+  '@material/material-color-utilities@0.2.7': {}
 
   '@napi-rs/wasm-runtime@0.2.4':
     dependencies:
@@ -6872,6 +6863,7 @@ snapshots:
   '@types/node@25.9.2':
     dependencies:
       undici-types: 7.24.6
+    optional: true
 
   '@types/parse-json@4.0.2': {}
 
@@ -9097,7 +9089,8 @@ snapshots:
 
   typescript@6.0.3: {}
 
-  undici-types@7.24.6: {}
+  undici-types@7.24.6:
+    optional: true
 
   unicode-canonical-property-names-ecmascript@2.0.1: {}
 
