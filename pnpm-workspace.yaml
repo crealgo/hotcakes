@@ -9,6 +9,7 @@ allowBuilds:
   nx: true
 
 catalog:
+  "@types/node": 26.x
   "@types/react": 18.x
   "@types/react-dom": 18.x
   react: 18.x
