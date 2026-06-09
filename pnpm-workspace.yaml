@@ -2,21 +2,24 @@ packages:
   - "apps/*"
   - "packages/*"
 
+minimumReleaseAge: 0
+
 allowBuilds:
   "@parcel/watcher": false
   "@swc/core": true
   esbuild: true
   nx: true
+  sharp: false
 
 catalog:
   "@types/node": 25.x
-  "@types/react": 18.x
-  "@types/react-dom": 18.x
-  react: 18.x
-  react-dom: 18.x
+  "@types/react": 19.x
+  "@types/react-dom": 19.x
+  react: 19.x
+  react-dom: 19.x
   "@eslint/js": 10.x
   eslint: 10.x
-  publint: ~0.3.18
-  typescript: ~5.9.3
-  vite: 4.x
-  vitest: ~4.1.4
+  publint: ~0.3.21
+  typescript: ~6.0.3
+  vite: 8.x
+  vitest: ~4.1.8
