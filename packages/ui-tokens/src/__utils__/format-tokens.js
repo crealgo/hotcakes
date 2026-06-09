@@ -1,0 +1,34 @@
+const generateColorVariants = (baseHex) => ({
+    main: {value: baseHex},
+    lightest: {value: baseHex},
+    lighter: {value: baseHex},
+    light: {value: baseHex},
+    neutral: {value: baseHex},
+    dark: {value: baseHex},
+    darker: {value: baseHex},
+    darkest: {value: baseHex},
+    contrast: {value: baseHex},
+});
+
+const variantCheck = ' !!has-variants';
+
+export const formatTokens = (tokens) => {
+    const formattedTokens = {};
+
+    for (const [key, value] of Object.entries(tokens)) {
+        if (typeof value === 'object') {
+            formattedTokens[key] = formatTokens(value);
+            continue;
+        }
+
+        if (typeof value === 'string' && value.includes(variantCheck)) {
+            const tokenValue = value.replace(variantCheck, '');
+            formattedTokens[key] = generateColorVariants(tokenValue);
+            continue;
+        }
+
+        formattedTokens[key] = {value};
+    }
+
+    return formattedTokens;
+};

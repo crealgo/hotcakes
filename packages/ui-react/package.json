@@ -30,17 +30,17 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "styled-components": "^6.4.1"
+    "styled-components": "^6.4.2"
   },
   "peerDependencies": {
-    "next": "^14.2.35",
+    "next": "^16.2.7",
     "react": "catalog:",
     "react-dom": "catalog:",
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/cli": "^4.3.0",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
