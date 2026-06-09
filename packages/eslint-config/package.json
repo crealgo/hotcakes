@@ -1,6 +1,6 @@
 {
   "name": "@hotcakes/eslint-config",
-  "version": "2.0.1",
+  "version": "0.0.0-semantically-versioned",
   "type": "module",
   "types": "./lib/index.d.ts",
   "exports": {

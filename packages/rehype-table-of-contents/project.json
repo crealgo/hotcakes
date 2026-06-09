@@ -14,7 +14,7 @@
             "dependsOn": ["build"],
             "executor": "nx:run-commands",
             "options": {
-                "command": "pnpm publish --no-git-checks",
+                "command": "node {workspaceRoot}/scripts/publish.mjs",
                 "cwd": "{projectRoot}"
             }
         }

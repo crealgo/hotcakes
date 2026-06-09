@@ -1,7 +1,7 @@
 {
   "name": "@hotcakes/ui-tokens",
   "type": "module",
-  "version": "1.1.0",
+  "version": "0.0.0-semantically-versioned",
   "description": "Design tokens for the Hotcakes UI system, generated with Style Dictionary from Material color utilities and Tailwind CSS.",
   "keywords": [
     "hotcakes",
