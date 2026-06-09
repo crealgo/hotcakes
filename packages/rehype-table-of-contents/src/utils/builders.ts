@@ -40,6 +40,21 @@ export class ObjectExpression implements estree.ObjectExpression {
     }
 }
 
+export class ExpressionProperty implements estree.Property {
+    type = 'Property' as const;
+    method = false;
+    shorthand = false;
+    computed = false;
+    kind = 'init' as const;
+    key: estree.Expression;
+    value: estree.Expression;
+
+    constructor(key: string, value: estree.Expression) {
+        this.key = new SimpleLiteral(key);
+        this.value = value;
+    }
+}
+
 export class ArrayExpression implements estree.ArrayExpression {
     type = 'ArrayExpression' as const;
     elements: estree.Expression[] = [];

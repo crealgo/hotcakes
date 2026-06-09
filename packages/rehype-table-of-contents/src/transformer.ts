@@ -1,6 +1,6 @@
 import {kebabCase} from 'change-case';
 import type * as hast from 'hast';
-import {AnchorElement, ArrayExpression, ObjectExpression} from './utils/builders.js';
+import {AnchorElement, ArrayExpression, ExpressionProperty, ObjectExpression} from './utils/builders.js';
 import {getFrontMatter} from './utils/getFrontMatter.js';
 import {getHeadings} from './utils/getHeadings.js';
 
@@ -26,19 +26,7 @@ const transformer = (ast: hast.Root): void => {
         heading.children = [new AnchorElement(`#${slug}`, heading.children)];
     }
 
-    frontmatter.properties.push({
-        type: 'Property',
-        key: {
-            type: 'Literal',
-            value: 'tableOfContents'
-        },
-        kind: 'init',
-        method: false,
-        shorthand: false,
-        computed: false,
-        // @ts-expect-error need to fix this type
-        value: tableOfContents
-    });
+    frontmatter.properties.push(new ExpressionProperty('tableOfContents', tableOfContents));
 };
 
 export default transformer;
