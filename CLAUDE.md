@@ -8,9 +8,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Monorepo Structure
 
-- **Build System**: Nx 22.7.1 with TypeScript project references (composite tsconfig)
-- **Package Manager**: pnpm 11.1.2
-- **Language**: TypeScript 5.9.3 (ESM modules)
+- **Build System**: Nx 22.x with TypeScript project references (composite tsconfig)
+- **Package Manager**: pnpm 11.x
+- **Language**: TypeScript 6.x (ESM modules)
 
 ### Workspace Layout
 
@@ -18,9 +18,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 apps/
   ui-react-docs/          # Storybook documentation site for ui-react components
 packages/
-  ui-react/              # React component library (styled-components + Tailwind CSS)
+  ui-react/               # React component library (styled-components + Tailwind CSS)
+  ui-web-components/      # Framework-agnostic Web Components (custom elements + shadow DOM)
+  ui-tokens/              # Design tokens (Style Dictionary → CSS custom properties, SCSS, JSON)
   rehype-table-of-contents/ # MDX/Rehype plugin for auto-generating table of contents
-  eslint-config/         # Shared ESLint configuration
+  eslint-config/          # Shared ESLint configuration
 ```
 
 ## Key Commands
@@ -96,8 +98,19 @@ The workspace uses composite TypeScript builds with path mappings. Key files:
   - Transforms heading elements and injects tableOfContents into MDX frontmatter
   - AST manipulation using hast and unified ecosystem
 
+- **ui-web-components** (Web Components library):
+  - Framework-agnostic, no dependencies
+  - `HotcakesElement` base class extends `HTMLElement` with auto shadow DOM attachment
+  - `@hotcakesElement(tagName)` decorator registers custom elements
+  - `disabledShadow = true` opts out of shadow DOM; styles adopted globally via `adoptedStyleSheets`
+
+- **ui-tokens** (Design tokens):
+  - Source tokens in `src/tokens/*.js`, built with Style Dictionary v5
+  - Build: `node src/__scripts__/build-tokens.js` → `lib/tokens.css`, `lib/tokens.scss`, `lib/tokens.json`
+  - Color variants generated via Material color utilities tonal palette
+
 - **eslint-config** (Shared tooling):
-  - Flat ESLint config (v9 format) with TypeScript support
+  - Flat ESLint config (v10 format) with TypeScript support
   - Customizations: 4-space indent, single quotes, arrow parens, jsx formatting
   - Excludes lib/, dist/, out/, node_modules/
 
@@ -146,7 +159,8 @@ The workspace uses Nx release with conventional commits:
 
 ## Notes
 
-- The workspace uses **pnpm workspaces** with a `catalog:` version directive for shared dependencies (React 18.x, TypeScript, Vitest, etc.)
-- **Node version**: 20.x (see `.nvmrc`)
+- The workspace uses **pnpm workspaces** with a `catalog:` version directive for shared dependencies. Note: `catalog:` is a workspace-internal protocol and must not appear in published `dependencies` or `peerDependencies` — use real semver ranges there.
+- **Node version**: 26.x (see `.nvmrc`)
 - **CSS compilation** must run before TypeScript build due to explicit Nx dependency (`dependsOn: ["^build-css"]`)
 - **@hotcakes/eslint-config** is used as a workspace dev dependency and re-exported in root `eslint.config.js`
+- **Releasing**: `pnpm nx release` — versions are tracked via git tags. Each package in `packages/` is released independently. CI pushes version commits and tags with `git push --follow-tags origin HEAD` after release.
