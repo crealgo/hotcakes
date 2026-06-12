@@ -1,0 +1,18 @@
+{
+  "name": "@hotcakes/ui-web-components",
+  "version": "0.0.0",
+  "type": "module",
+  "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
+  "exports": {
+    "./package.json": "./package.json",
+    "./*.js": "./lib/*.js",
+    "./utils/*.js": "./lib/__utils__/*.js"
+  },
+  "files": [
+    "lib/**"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
