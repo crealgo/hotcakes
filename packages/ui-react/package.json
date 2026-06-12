@@ -17,9 +17,7 @@
   "exports": {
     "./package.json": "./package.json",
     "./index.css": "./lib/index.css",
-    "./*": "./lib/*.js",
-    "./utils/*": "./lib/utils/*.js",
-    "./hooks/*": "./lib/hooks/*.js"
+    "./*": "./lib/*"
   },
   "files": [
     "lib/**"

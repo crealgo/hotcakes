@@ -8,6 +8,9 @@
       "path": "./packages/eslint-config/tsconfig.json"
     },
     {
+      "path": "./packages/ui-web-components/tsconfig.json"
+    },
+    {
       "path": "./packages/ui-react/tsconfig.json"
     }
   ],
