@@ -1,0 +1,29 @@
+{
+  "name": "@hotcakes/ui-web-components",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Framework-agnostic Web Components built on the custom elements API, with a base class and decorators for defining and registering elements with shadow DOM support.",
+  "keywords": [
+    "hotcakes",
+    "web-components",
+    "custom-elements",
+    "shadow-dom",
+    "decorators",
+    "vanilla",
+    "typescript",
+    "ui"
+  ],
+  "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
+  "exports": {
+    "./package.json": "./package.json",
+    "./*.js": "./lib/*.js",
+    "./utils/*.js": "./lib/__utils__/*.js"
+  },
+  "files": [
+    "lib/**"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

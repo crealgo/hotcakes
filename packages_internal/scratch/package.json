@@ -1,0 +1,13 @@
+{
+  "name": "@internal/scratch",
+  "version": "0.0.0",
+  "type": "module",
+  "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
+  "license": "MIT",
+  "dependencies": {
+    "@hotcakes/ui-web-components": "workspace:^"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
