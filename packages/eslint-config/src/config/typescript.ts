@@ -22,6 +22,7 @@ export const typescript = defineConfig(
             'no-import-assign': 'off',
             'no-new-native-nonconstructor': 'off',
             'no-setter-return': 'off',
+            'no-useless-return': 'off',
 
             // TypeScript overrides over JavaScript (from @deere/eslint-config)
             '@typescript-eslint/adjacent-overload-signatures': 'error',

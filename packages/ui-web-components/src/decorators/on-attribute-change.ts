@@ -1,4 +1,4 @@
-export function observedCallback() {
+export function onAttributeChange() {
     return function (): undefined {
         return undefined;
     };

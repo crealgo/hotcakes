@@ -15,9 +15,11 @@
   ],
   "author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
   "exports": {
+    ".": "./lib/index.js",
     "./package.json": "./package.json",
     "./*.js": "./lib/*.js",
-    "./utils/*.js": "./lib/__utils__/*.js"
+    "./classes/*.js": "./lib/classes/*.js",
+    "./decorators/*.js": "./lib/decorators/*.js"
   },
   "files": [
     "lib/**"

@@ -1,0 +1,10 @@
+{
+  "name": "@hotcakes/ui-web-components-docs",
+  "type": "module",
+  "devDependencies": {
+    "@fontsource-variable/arimo": "^5.2.8",
+    "@hotcakes/ui-web-components": "workspace:^",
+    "@storybook/web-components-vite": "^10.5.2",
+    "storybook": "10.4.2"
+  }
+}
