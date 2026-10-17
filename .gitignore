@@ -153,3 +153,27 @@ dist
 
 
 storybook-static
+
+# Local files, credentials, and generated artifacts
+Thumbs.db
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account*.json
+*-service-account.json
+token-info.json
+.next/
+.nuxt/
+.astro/
+.turbo/
+.nx/
+.temp/
+coverage/
+playwright-report/
+test-results/
